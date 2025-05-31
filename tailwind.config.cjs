@@ -4,6 +4,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",

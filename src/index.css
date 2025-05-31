@@ -19,6 +19,9 @@
   display: block;
 }
 
+.primary-bg{
+  background-color: #050816;
+}
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -125,6 +128,29 @@
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
+/* hexa dtyle */
+.decagon-shape {
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    95% 30%,
+    100% 50%,
+    95% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    5% 70%,
+    0% 50%,
+    5% 30%,
+    20% 10%
+  );
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
 /* AI-Style Pulsing Border Animation */
 @keyframes aiBorderPulse {
   0% {

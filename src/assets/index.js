@@ -1,82 +1,93 @@
+// Basic Assets
 import logo_m from "./logo_m.svg";
 import facebook from "./tech/facebook.png"; 
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
-import next from "./tech/next.jpg";
-import mongoose from "./tech/mongoose.png"; 
-import Bootstrap from "./tech/Bootstrap.png";
+// Skills & Tech
+import html from "../assets/Skills/html.png";
+import css from "../assets/Skills/css.png";
+import bootstrap from "../assets/Skills/bootstrap.png"; // Note: Was incorrectly named 'Bootstrap' in exports
+import tailwind from "./tech/tailwind.png";
+import javascript from "./tech/javascript.png";
+import typescript from "./tech/typescript.png";
+import react from "./tech/reactjs.png";
+import redux from "./tech/redux.png";
+import nodejs from "./tech/nodejs.png";
+import express from "../assets/Skills/express.png";
+import socket from "../assets/Skills/socket.png";
+import mongodb from "./tech/mongodb.png";
+import mongoose from "./tech/mongoose.png";
+import github from "../assets/Skills/github.png";
+import firebase from "../assets/Skills/firebase.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import next from "./tech/next.jpg";
+import threejs from "../assets/Skills/threejs.jpg";
 import wub from "./tech/wub.jpg";
 
+// Company Logos
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import tcs from "./company/tcs.png";
 import intelligence from "./company/intelligence.png";
-import intelligence2 from "./intelligence2.jpg";
 import sun from "./company/sun.png";
+import intelligence2 from "./intelligence2.jpg";
 
+// Projects
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import payment from "./payment.jpg";
 import rental from "./rental.png";
 
-export { 
+// ✅ Final Clean Export
+export {
+  logo_m,
+  facebook,
   backend,
   creator,
   mobile,
-  web, 
+  web,
   menu,
   close,
+  html,
   css,
-  logo_m,
-  github,
+  bootstrap,
+  tailwind,
+  javascript,
+  typescript,
+  react,
+  redux,
+  nodejs,
+  express,
+  socket,
+  mongodb,
   mongoose,
-  Bootstrap,
-  next,
-  wub,
+  github,
+  firebase,
   figma,
   git,
-  facebook,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
+  next,
   threejs,
+  wub,
   meta,
   shopify,
   starbucks,
   tesla,
+  tcs,
+  intelligence,
+  intelligence2,
+  sun,
   carrent,
   jobit,
   tripguide,
-  tcs,
-  intelligence,
-  sun,
   payment,
-  intelligence2,
-  rental
+  rental,
 };

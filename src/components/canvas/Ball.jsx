@@ -38,9 +38,11 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  if (!icon) return <div className="w-20 h-20 bg-gray-200 rounded-full" />;
+
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="always"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
@@ -48,10 +50,10 @@ const BallCanvas = ({ icon }) => {
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
 };
+
 
 export default BallCanvas;

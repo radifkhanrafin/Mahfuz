@@ -5,17 +5,9 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
   git,
   figma,
-  next,
-  Bootstrap,
+  next, 
   meta,
   starbucks,
   tesla,
@@ -32,7 +24,18 @@ import {
   rental,
   github,
   mongoose,
-  wub
+  wub,
+  bootstrap,
+  react,
+  tailwind,
+  html,
+  css,
+  redux,
+  nodejs,
+  express,
+  mongodb,
+  socket,
+  firebase
 } from "../assets";
 
 export const navLinks = [
@@ -80,7 +83,7 @@ const technologies = [
   },
   {
     name: "Bootstrap CSS",
-    icon: Bootstrap,
+    icon: bootstrap,
   },
   {
     name: "Tailwind CSS",
@@ -96,7 +99,7 @@ const technologies = [
   },
   {
     name: "React JS",
-    icon: reactjs,
+    icon: react,
   },
   {
     name: "Redux Toolkit",
@@ -106,37 +109,48 @@ const technologies = [
     name: "Next.js",
     icon: next,
   },
-
   {
     name: "Node JS",
     icon: nodejs,
+  },
+  {
+    name: "Express JS",
+    icon: express,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "mongoose",
+    name: "Mongoose",
     icon: mongoose,
+  },
+  {
+    name: "Socket.IO",
+    icon: socket,
   },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "git hub",
+    name: "GitHub",
     icon: github,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
-
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
 ];
+
 
 const education = [
   {
@@ -237,7 +251,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Payment App",
+    name: "Hire-Wave",
     description:
       // "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
       "A full-featured web application developed using the MERN stack, designed to simulate the functionality of PayTM. This app supports user registration, authentication, and secure banking transactions. Built with modern tools and technologies such as React with Vite, Tailwind CSS for styling.",
