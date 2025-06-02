@@ -7,21 +7,16 @@ import {
   typescript,
   git,
   figma,
-  next, 
+  next,
   meta,
   starbucks,
   tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  shopify,   
   threejs,
   tcs,
   intelligence,
-  sun,
-  payment,
-  intelligence2,
-  rental,
+  sun, 
+  intelligence2, 
   github,
   mongoose,
   wub,
@@ -35,7 +30,11 @@ import {
   express,
   mongodb,
   socket,
-  firebase
+  firebase,
+  hirewave,
+  lawyer,
+  vessel,
+  wubcs
 } from "../assets";
 
 export const navLinks = [
@@ -250,77 +249,169 @@ const testimonials = [
 ];
 
 const projects = [
+  // Legal Lawyer
   {
-    name: "Hire-Wave",
+    name: "Legal Lawyer",
+    team: false,
     description:
-      // "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      "A full-featured web application developed using the MERN stack, designed to simulate the functionality of PayTM. This app supports user registration, authentication, and secure banking transactions. Built with modern tools and technologies such as React with Vite, Tailwind CSS for styling.",
+    {
+      "overview": "The Legal Lawyer Website is an innovative platform designed to connect individuals seeking legal assistance with qualified lawyers. The website features an intuitive interface and a robust chat system that facilitates real-time communication between users and legal professionals.",
+      "key_features": [
+        "Chat System: Users can engage in live chat with lawyers to discuss their legal concerns, receive guidance, and schedule consultations, ensuring quick and efficient communication.",
+        "Lawyer Directory: A comprehensive directory allows users to search for lawyers based on their specialties, location, and user ratings, making it easier to find the right legal expert. User Profiles: Individuals can create personal profiles to track their inquiries, consultations, and any ongoing legal matters, providing a personalized experience.",
+        "Resources and Articles: The website includes a section with legal resources and informative articles, helping users understand various legal topics and their rights.",
+        "Secure Communication: All interactions on the platform are secured to protect user privacy and ensure confidentiality."
+      ]
+    }
+    ,
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
-    ],
-    image: payment,
-    source_code_link: "https://github.com/syedahmedullah14/PayTM-Project",
-  },
-  {
-    name: "Company Portfolio",
-    description:
-      "Built a responsive portfolio using ReactJS, leveraging components and state management for a seamless user experience across devices. Developed a feature for dynamic theme changes, enhancing user engagement by allowing personalization of background and foreground colors through efficient state management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "bootsrap5",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: intelligence2,
-    source_code_link: "https://int-elligence.co.uk/",
-  },
-  {
-    name: "Rental Management System",
-    description:
-      "Developed a robust system for a construction equipment company to manage customer records, including transaction history, products, suppliers, and rental records, ensuring secure and efficient data storage and retrieval. Integrated a billing and invoicing system, allowing for accurate and streamlined financial transactions.",
-    tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
         name: "express.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
         color: "pink-text-gradient",
       },
       {
-        name: "aws",
+        name: "mongodb",
         color: "green-text-gradient",
       },
+      {
+        name: "fire-base",
+        color: "green-text-gradient",
+      },
+
     ],
-    image: rental,
-    source_code_link: "https://github.com/syedahmedullah14",
+    image: lawyer,
+    source_code_link_client: "https://github.com/radifkhanrafin/Legal_lawyer",
+    source_code_link_server: "https://github.com/radifkhanrafin/legal_lawyer_server",
+    live_link: "https://grand-centaur-e1b3c6.netlify.app/",
+  },
+
+  // hire wave
+  {
+    name: "Hire Wave -Hiring Agency",
+    team: true,
+    description:
+    {
+      "description": "Celebrating the creation of Hirewave: A game-changing hiring agency that connects businesses with top global talent effortlessly. Our unique approach to recruitment, combining cutting-edge technology with personalized service, has already transformed countless organizations. With Hirewave...",
+      "key_features": [
+        "Talent Marketplace: A diverse pool of vetted professionals across various industries and skill levels.",
+        "Simple Matching System: Streamlined tools to help businesses find suitable candidates based on skills, experience, and availability.",
+        "Secure Payments: An integrated payment system ensuring safe and timely transactions between clients and freelancers.",
+        "Project Management Tools: Features like time tracking, file sharing, and task updates to support smooth project execution.",
+        "Review and Rating System: A transparent feedback system for both clients and freelancers to promote accountability.",
+        "Custom Job Posting: Employers can create detailed job listings with clear requirements, budgets, and deadlines.",
+        "Real-Time Messaging: Built-in chat system for immediate and organized communication between clients and freelancers.",
+        "Global Reach: Enables connections between businesses and skilled professionals worldwide, regardless of location."
+      ]
+    }
+    ,
+    tags: [
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "fire-base",
+        color: "green-text-gradient",
+      },
+
+    ],
+    image: hirewave,
+    source_code_link_client: "https://github.com/ProgrammerShipon/HireWave-Client",
+    source_code_link_server: "https://github.com/ProgrammerShipon/HireWave-Server",
+    live_link: "https://hire-wave.web.app/",
+  },
+
+  // Any Vessel
+  {
+    name: "Any Vessel ",
+    team: true,
+    description:
+    {
+      "description": "Introducing Any Vessel – a comprehensive platform dedicated to everything related to vessels. Whether you're looking to sell or buy a vessel, hire a crew, or find a maritime job, Any Vessel simplifies it all in one unified space. Built with a focus on the marine industry, it offers seamless interactions between vessel owners, shipping companies, and seafarers across the globe.",
+      "key_features": [
+        "Vessel Marketplace: A specialized section for listing and browsing vessels for sale, covering all types and sizes.",
+        "Crew Hiring: Vessel owners and operators can easily post crew requirements and connect with qualified maritime professionals.",
+        "Job Listings: Seafarers can explore and apply to job opportunities tailored to their rank, expertise, and desired location.",
+        "Secure Transactions: Safe and trusted payment processing for services and vessel-related deals.",
+        "Profile Management: Detailed profiles for both companies and individuals, highlighting experience, certifications, and availability.",
+        "Real-Time Messaging: Instant communication tools to coordinate sales, job offers, and crew arrangements.",
+        "Verified Listings: All vessels and job posts are verified for authenticity to ensure trust and professionalism.",
+        "Global Network: Connect with maritime professionals and businesses from around the world with ease."
+      ]
+    }
+
+    ,
+    tags: [
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "fire-base",
+        color: "green-text-gradient",
+      },
+
+    ],
+    image: vessel,
+    source_code_link_client: "https://github.com/foridislam332/anyvessel-client/tree/Mahfuz",
+    source_code_link_server: "https://github.com/rayhanrayhan/anyvessel-server/tree/Mahfuz",
+    live_link: "https://hire-wave.web.app/",
+  },
+  // Wub computer Club
+  {
+    name: "WUB Computer Society",
+    team: false,
+    description:
+    {
+      "description": "WUBCS (World University of Bangladesh Computer Society) is the official student-run tech community of the CSE Department at the World University of Bangladesh. Dedicated to fostering innovation, collaboration, and technical excellence, WUBCS serves as a platform for students to explore and grow in the fields of programming, robotics, web development, AI, cybersecurity, and more. Through workshops, coding contests, seminars, and national-level tech events, WUBCS empowers students to bridge the gap between academic knowledge and real-world skills, nurturing the next generation of tech leaders."
+    }
+
+
+    ,
+    tags: [
+
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+
+    ],
+    image: wubcs,
+    source_code_link_client: "",
+    source_code_link_server: "",
+    live_link: "https://fascinating-panda-892615.netlify.app/",
   },
 ];
 

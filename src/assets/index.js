@@ -1,6 +1,6 @@
 // Basic Assets
 import logo_m from "./logo_m.svg";
-import facebook from "./tech/facebook.png"; 
+import facebook from "./tech/facebook.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -40,12 +40,12 @@ import intelligence from "./company/intelligence.png";
 import sun from "./company/sun.png";
 import intelligence2 from "./intelligence2.jpg";
 
-// Projects
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import payment from "./payment.jpg";
-import rental from "./rental.png";
+// Projects  
+import hirewave from "./Project/hirewave.png";
+import wubcs from "./Project/wubcs.png";
+import lawyer from "./Project/lawyer.png";
+import vessel from "./Project/vessel.png";
+import money from "./Project/money.png";
 
 // ✅ Final Clean Export
 export {
@@ -85,9 +85,10 @@ export {
   intelligence,
   intelligence2,
   sun,
-  carrent,
-  jobit,
-  tripguide,
-  payment,
-  rental,
+  // project
+  hirewave,
+  vessel,
+  money, 
+  lawyer,
+  wubcs,
 };
