@@ -15,6 +15,15 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    emailjs.sendForm('service_tjpck49', 'template_nuv3tsp', '#myForm').then(
+  (response) => {
+    console.log('SUCCESS!', response.status, response.text);
+  },
+  (error) => {
+    console.log('FAILED...', error);
+  },
+);
+
     emailjs
       .sendForm(
         'service_sxcsjlc',         // Your service ID
