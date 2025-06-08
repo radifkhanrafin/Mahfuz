@@ -29,17 +29,17 @@ const ProjectCard = ({
       >
         <div className='relative w-full h-80'>
 
-          
+
           <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
-           <a href={live_link}
-           target="_blank">
-             <img
-             
-              src={image}
-              alt="project_image"
-              className="w-full object-cover rounded-2xl transform transition-transform duration-1000 ease-in-out hover:-translate-y-[50%]"
-            />
-           </a>
+            <a href={live_link}
+              target="_blank">
+              <img
+
+                src={image}
+                alt="project_image"
+                className="w-full object-cover rounded-2xl transform transition-transform duration-1000 ease-in-out hover:-translate-y-[50%]"
+              />
+            </a>
           </div>
 
 
@@ -59,7 +59,8 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          <a href={live_link}><h3 className='text-white font-bold text-[24px]'>{name}</h3></a>
+          
           {/* <p className='mt-2 text-secondary text-[14px]'>{description}</p> */}
         </div>
 

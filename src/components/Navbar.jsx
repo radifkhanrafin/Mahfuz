@@ -58,10 +58,10 @@ const Navbar = () => {
             <a href="https://www.facebook.com/radifbro01621961907" target="_blank">
                 <img src={facebook} alt="facebook" className='w-8 h-9' />
               </a>
-            <a href="https://www.linkedin.com/in/ahmedullahsyed/" target="_blank">
+            <a href="https://www.linkedin.com/in/md-mahfuz-hossain-066337257/" target="_blank">
                 <img src={linkedin} alt="" className='w-9 h-9' />
               </a>
-            <a href="https://github.com/syedahmedullah14"  target="_blank">
+            <a href="https://github.com/radifkhanrafin"  target="_blank">
                 <img src={github} alt="" className='w-9 h-9' />
               </a>
             <a href="https://x.com/syed_ahmedullah"  target="_blank">
