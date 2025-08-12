@@ -64,9 +64,7 @@ const Navbar = () => {
             <a href="https://github.com/radifkhanrafin"  target="_blank">
                 <img src={github} alt="" className='w-9 h-9' />
               </a>
-            <a href="https://x.com/syed_ahmedullah"  target="_blank">
-                <img src={x} alt="" className='w-9 h-9' />
-              </a>
+            
               </div>
        
         </div>

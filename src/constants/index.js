@@ -11,12 +11,11 @@ import {
   meta,
   starbucks,
   tesla,
-  shopify,   
+  shopify,
   threejs,
   tcs,
   intelligence,
-  sun, 
-  intelligence2, 
+  sun,
   github,
   mongoose,
   wub,
@@ -31,10 +30,17 @@ import {
   mongodb,
   socket,
   firebase,
-  hirewave,
+  // hirewave,
   lawyer,
   vessel,
-  wubcs
+  wubcs,
+  bulbul,
+  webVolt,
+  hirewave,
+  hex,
+  resturent,
+  vijilan
+
 } from "../assets";
 
 export const navLinks = [
@@ -164,7 +170,7 @@ const education = [
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
-    logo: '',
+    logo: bulbul,
     status: "Passed",
     dept: 'Science',
     institution: "Shahid Bulbul Govt. Collage", // replace with your actual college
@@ -176,7 +182,7 @@ const experiences = [
   {
     title: "MERN Stack Developer Intern",
     company_name: "Return Hex",
-    icon: 'returnHexIcon',  // Replace with actual icon import or variable
+    icon: hex,  // Replace with actual icon import or variable
     iconBg: "#F0F4F8",    // Light background color for the icon
     date: "January 2025 - April 2025",
     points: [
@@ -190,7 +196,7 @@ const experiences = [
   {
     title: "Front-End Developer & Trainer",
     company_name: "Webvolt Digital Agency",
-    icon: 'webvoltIcon',  // Replace with actual icon import or variable
+    icon: webVolt,  // Replace with actual icon import or variable
     iconBg: "#2563EB",  // Tailwind blue-600 for contrast
     date: "September 2023 - December 2024",
     points: [
@@ -249,50 +255,6 @@ const testimonials = [
 ];
 
 const projects = [
-  // Legal Lawyer
-  {
-    name: "Legal Lawyer",
-    team: false,
-    description:
-    {
-      "overview": "The Legal Lawyer Website is an innovative platform designed to connect individuals seeking legal assistance with qualified lawyers. The website features an intuitive interface and a robust chat system that facilitates real-time communication between users and legal professionals.",
-      "key_features": [
-        "Chat System: Users can engage in live chat with lawyers to discuss their legal concerns, receive guidance, and schedule consultations, ensuring quick and efficient communication.",
-        "Lawyer Directory: A comprehensive directory allows users to search for lawyers based on their specialties, location, and user ratings, making it easier to find the right legal expert. User Profiles: Individuals can create personal profiles to track their inquiries, consultations, and any ongoing legal matters, providing a personalized experience.",
-        "Resources and Articles: The website includes a section with legal resources and informative articles, helping users understand various legal topics and their rights.",
-        "Secure Communication: All interactions on the platform are secured to protect user privacy and ensure confidentiality."
-      ]
-    }
-    ,
-    tags: [
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "fire-base",
-        color: "green-text-gradient",
-      },
-
-    ],
-    image: lawyer,
-    source_code_link_client: "https://github.com/radifkhanrafin/Legal_lawyer",
-    source_code_link_server: "https://github.com/radifkhanrafin/legal_lawyer_server",
-    live_link: "https://grand-centaur-e1b3c6.netlify.app/",
-  },
-
   // hire wave
   {
     name: "Hire Wave -Hiring Agency",
@@ -341,6 +303,94 @@ const projects = [
     live_link: "https://hire-wave.web.app/",
   },
 
+
+  //vijilin
+  {
+    name: "Vijilan - Cybersecurity Solutions Platform",
+    team: false,
+    description: {
+      "overview": "Vijilan is a comprehensive React-based web application designed for a cybersecurity company specializing in Managed Service Provider (MSP) solutions, threat response, and compliance services. The platform offers a rich set of features to support MSP partners and provide clients with detailed analytics, resources, and case studies.",
+      "key_features": [
+        "Multi-page Application: Over 50 routes covering a wide range of cybersecurity services and solutions.",
+        "Responsive Design: Built with Tailwind CSS for seamless access across desktops, tablets, and mobile devices.",
+        "MSP Partner Programs: Automation-focused tools and resources tailored for MSP partners.",
+        "Case Studies: Showcasing successful cybersecurity implementations and client outcomes.",
+        "Blog System: Includes landing pages and post management for sharing industry insights and updates.",
+        "Dashboard: Analytics and reporting features to track service performance and security metrics.",
+        "Pricing Tools: Dynamic pricing calculators for MSP services.",
+        "Resource Center: Comprehensive documentation, guides, and support materials.",
+        "Professional Services Portfolio: Detailed showcase of cybersecurity services offered."
+      ]
+    },
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react-router",
+        color: "green-text-gradient",
+      },
+      {
+        name: "npm",
+        color: "yellow-text-gradient",
+      }
+    ],
+    image: vijilan,
+    source_code_link_client: "https://github.com/yourusername/vijilan-client",
+    live_link: "https://vijilin.vercel.app/"
+  }
+  ,
+
+
+  // resturent
+
+  {
+    name: "Restaurant Management Website",
+    team: false,
+    description: {
+      "overview": "The Restaurant Management Website is a modern, responsive platform designed to streamline both customer ordering and restaurant administration. It features separate dashboards for customers and admins, ensuring a smooth and efficient workflow for both sides of the business. Built with Next.js, Tailwind CSS, and TypeScript, the site offers high performance, a clean design, and user-friendly navigation.",
+      "key_features": [
+        "Customer Dashboard: Allows customers to browse the menu, add items to their cart, place orders, and track order status in real time.",
+        "Admin Dashboard: Enables administrators to manage menu items, update prices, view and process orders, and oversee customer interactions.",
+        "Order Management: Utilizes Local Storage to handle session-based order tracking, ensuring smooth performance without requiring a backend database.",
+        "Responsive Design: Fully optimized for desktop, tablet, and mobile devices for a seamless user experience.",
+        "Fast and SEO-Friendly: Powered by Next.js to deliver quick load times and better search engine visibility.",
+        "Modern UI: Styled with Tailwind CSS for a clean, visually appealing, and easy-to-use interface."
+      ]
+    },
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "local-storage",
+        color: "green-text-gradient",
+      }
+    ],
+    image: resturent,
+    source_code_link_client: "https://github.com/yourusername/restaurant-client",
+    live_link: "https://hungry-me.vercel.app/"
+  }
+  ,
+
   // Any Vessel
   {
     name: "Any Vessel ",
@@ -388,6 +438,49 @@ const projects = [
     source_code_link_client: "https://github.com/foridislam332/anyvessel-client/tree/Mahfuz",
     source_code_link_server: "https://github.com/rayhanrayhan/anyvessel-server/tree/Mahfuz",
     live_link: "https://hire-wave.web.app/",
+  },
+  // Legal Lawyer
+  {
+    name: "Legal Lawyer",
+    team: false,
+    description:
+    {
+      "overview": "The Legal Lawyer Website is an innovative platform designed to connect individuals seeking legal assistance with qualified lawyers. The website features an intuitive interface and a robust chat system that facilitates real-time communication between users and legal professionals.",
+      "key_features": [
+        "Chat System: Users can engage in live chat with lawyers to discuss their legal concerns, receive guidance, and schedule consultations, ensuring quick and efficient communication.",
+        "Lawyer Directory: A comprehensive directory allows users to search for lawyers based on their specialties, location, and user ratings, making it easier to find the right legal expert. User Profiles: Individuals can create personal profiles to track their inquiries, consultations, and any ongoing legal matters, providing a personalized experience.",
+        "Resources and Articles: The website includes a section with legal resources and informative articles, helping users understand various legal topics and their rights.",
+        "Secure Communication: All interactions on the platform are secured to protect user privacy and ensure confidentiality."
+      ]
+    }
+    ,
+    tags: [
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "fire-base",
+        color: "green-text-gradient",
+      },
+
+    ],
+    image: lawyer,
+    source_code_link_client: "https://github.com/radifkhanrafin/Legal_lawyer",
+    source_code_link_server: "https://github.com/radifkhanrafin/legal_lawyer_server",
+    live_link: "https://grand-centaur-e1b3c6.netlify.app/",
   },
   // Wub computer Club
   {

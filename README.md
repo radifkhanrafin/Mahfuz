@@ -137,8 +137,7 @@ import {
   tcs,
   intelligence,
   sun,
-  payment,
-  intelligence2,
+  payment, 
   rental
 } from "../assets";
 
@@ -359,8 +358,7 @@ const projects = [
         name: "css",
         color: "pink-text-gradient",
       },
-    ],
-    image: intelligence2,
+    ], 
     source_code_link: "https://int-elligence.co.uk/",
   },
   {

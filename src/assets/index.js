@@ -29,6 +29,8 @@ import git from "./tech/git.png";
 import next from "./tech/next.jpg";
 import threejs from "../assets/Skills/threejs.jpg";
 import wub from "./tech/wub.jpg";
+import bulbul from "./tech/bulbul.png";
+
 
 // Company Logos
 import meta from "./company/meta.png";
@@ -38,14 +40,18 @@ import tesla from "./company/tesla.png";
 import tcs from "./company/tcs.png";
 import intelligence from "./company/intelligence.png";
 import sun from "./company/sun.png";
-import intelligence2 from "./intelligence2.jpg";
+import webVolt from "./company/web volt.png";
+import hex from "./company/hex.png";
+
 
 // Projects  
-import hirewave from "./Project/hirewave.png";
 import wubcs from "./Project/wubcs.png";
+import hirewave from "./Project/hirewave.png";
 import lawyer from "./Project/lawyer.png";
 import vessel from "./Project/vessel.png";
 import money from "./Project/money.png";
+import resturent from "./Project/resturent.png";
+import vijilan from "./Project/vijilan.png";
 
 // ✅ Final Clean Export
 export {
@@ -77,18 +83,22 @@ export {
   next,
   threejs,
   wub,
+  bulbul,
+  webVolt,
+  hex,
   meta,
   shopify,
   starbucks,
   tesla,
   tcs,
   intelligence,
-  intelligence2,
   sun,
   // project
   hirewave,
   vessel,
-  money, 
+  money,
   lawyer,
   wubcs,
+  resturent,
+  vijilan,
 };
