@@ -5,13 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "chmod +x ./node_modules/.bin/vite",
-    "build": "npx vite build",
-    "preview": "vite preview",
-    "prepare": "chmod +x ./node_modules/.bin/vite"
-  },
-  "engines": {
-    "node": ">=18"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
