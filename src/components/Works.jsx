@@ -17,35 +17,30 @@ const ProjectCard = ({
   source_code_link_client,
   live_link
 }) => {
-
   const overview = description.overview || description.description || "";
-
-  // State to toggle full overview text
   const [showFullOverview, setShowFullOverview] = useState(false);
-
-  // Truncate length
   const truncateLength = 150;
+  const toggleOverview = () => setShowFullOverview(prev => !prev);
 
-  const toggleOverview = () => setShowFullOverview((prev) => !prev);
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="max-w-md mx-auto"
+      className="w-full sm:max-w-md mx-auto"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="relative w-full border-white border-2 p-5 rounded-2xl bg-gray-900">
         {/* Project Image */}
-        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
-          <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
-            <a href={live_link} target="_blank" rel="noopener noreferrer" aria-label={`${name} live demo`}>
-              <img
-                src={image}
-                alt={`${name} project screenshot`}
-                style={{ maxHeight: "460px", transition: "transform 8s linear" }}
-                className="w-full rounded-2xl object-cover transform group-hover:-translate-y-[230px]"
-              />
-            </a>
-          </div>
-
+        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
+          <a href={live_link} target="_blank" rel="noopener noreferrer" aria-label={`${name} live demo`}>
+            <img
+              src={image}
+              alt={`${name} project screenshot`}
+              className="w-full rounded-2xl object-cover sm:group-hover:-translate-y-[230px] transform transition-transform duration-[8s] ease-linear animate-scroll-mobile"
+              style={{ maxHeight: "460px" }}
+            />
+          </a>
 
           {/* Source code button */}
           {source_code_link_client && (
@@ -67,11 +62,12 @@ const ProjectCard = ({
         </div>
 
         {/* Project Name */}
-        <div className="mt-5 inline-flex  gap-0">
+        <div className="mt-5 inline-flex gap-0">
           <a href={live_link} target="_blank" rel="noopener noreferrer">
-            <h3 className="text-white font-bold text-[24px] hover:underline">{name}  <span  className="font-semibold text-[8px]">( {projectType} )</span></h3>
-           
-          </a> 
+            <h3 className="text-white font-bold text-[24px] hover:underline">
+              {name} <span className="font-semibold text-[8px]">( {projectType} )</span>
+            </h3>
+          </a>
         </div>
 
         {/* Overview with toggle */}
@@ -109,7 +105,7 @@ const ProjectCard = ({
 
         {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
+          {tags.map(tag => (
             <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
