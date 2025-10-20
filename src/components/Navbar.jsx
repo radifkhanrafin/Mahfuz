@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import {menu, close, github, logo_m, facebook } from "../assets";
-import { a } from "maath/dist/objectSpread2-284232a6.esm";
-import linkedin from "../assets/linkedin.svg"
-import x from "../assets/x.svg"
+import {menu, close, github, logo_m, facebook } from "../assets"; 
+import linkedin from "../assets/linkedin.svg" 
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -55,7 +53,7 @@ const Navbar = () => {
         </Link>
             
             <div className="flex gap-4 ml-5">
-            <a href="https://www.facebook.com/radifbro01621961907" target="_blank">
+            <a href="https://www.facebook.com/radif.naz" target="_blank">
                 <img src={facebook} alt="facebook" className='w-8 h-9' />
               </a>
             <a href="https://www.linkedin.com/in/md-mahfuz-hossain-066337257/" target="_blank">
