@@ -36,6 +36,7 @@ const StarsCanvas = () => {
       <Canvas
         camera={{ position: [0, 0, 1] }}
         gl={{ antialias: true, powerPreference: "high-performance" }}
+        frameloop="demand" // <-- only render when invalidated
       >
         <Suspense fallback={null}>
           <Stars />

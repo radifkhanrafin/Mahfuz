@@ -258,6 +258,7 @@ const projects = [
   // hire wave
   {
     name: "Hire Wave -Hiring Agency",
+    projectType :" ",
     team: true,
     description:
     {
@@ -306,7 +307,8 @@ const projects = [
 
   //vijilin
   {
-    name: "Vijilan - Cybersecurity Solutions Platform",
+    name: "Vijilan - Cybersecurity Solutions Platform ",
+     projectType :"Client Project",
     team: false,
     description: {
       "overview": "Vijilan is a comprehensive React-based web application designed for a cybersecurity company specializing in Managed Service Provider (MSP) solutions, threat response, and compliance services. The platform offers a rich set of features to support MSP partners and provide clients with detailed analytics, resources, and case studies.",
@@ -345,7 +347,7 @@ const projects = [
       }
     ],
     image: vijilan,
-    source_code_link_client: "https://github.com/yourusername/vijilan-client",
+    source_code_link_client: " ",
     live_link: "https://vijilin.vercel.app/"
   }
   ,
@@ -354,7 +356,8 @@ const projects = [
   // resturent
 
   {
-    name: "Restaurant Management Website",
+    name: "Restaurant Management Website ",
+     projectType :"Client Project",
     team: false,
     description: {
       "overview": "The Restaurant Management Website is a modern, responsive platform designed to streamline both customer ordering and restaurant administration. It features separate dashboards for customers and admins, ensuring a smooth and efficient workflow for both sides of the business. Built with Next.js, Tailwind CSS, and TypeScript, the site offers high performance, a clean design, and user-friendly navigation.",
@@ -386,14 +389,15 @@ const projects = [
       }
     ],
     image: resturent,
-    source_code_link_client: "https://github.com/yourusername/restaurant-client",
+    source_code_link_client: "",
     live_link: "https://hungry-me.vercel.app/"
   }
   ,
 
   // Any Vessel
   {
-    name: "Any Vessel ",
+    name: "Any Vessel   ",
+     projectType :"Client Project",
     team: true,
     description:
     {
@@ -437,11 +441,12 @@ const projects = [
     image: vessel,
     source_code_link_client: "https://github.com/foridislam332/anyvessel-client/tree/Mahfuz",
     source_code_link_server: "https://github.com/rayhanrayhan/anyvessel-server/tree/Mahfuz",
-    live_link: "https://hire-wave.web.app/",
+    live_link: "https://cheerful-cucurucho-60f8c8.netlify.app/",
   },
   // Legal Lawyer
   {
-    name: "Legal Lawyer",
+    name: "Legal Lawyer  ",
+     projectType :" ",
     team: false,
     description:
     {
@@ -478,6 +483,8 @@ const projects = [
 
     ],
     image: lawyer,
+    // source_code_link_client: " ",
+    // source_code_link_server: " ",
     source_code_link_client: "https://github.com/radifkhanrafin/Legal_lawyer",
     source_code_link_server: "https://github.com/radifkhanrafin/legal_lawyer_server",
     live_link: "https://grand-centaur-e1b3c6.netlify.app/",
@@ -485,6 +492,7 @@ const projects = [
   // Wub computer Club
   {
     name: "WUB Computer Society",
+     projectType :" ",
     team: false,
     description:
     {

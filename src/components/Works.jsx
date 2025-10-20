@@ -10,6 +10,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({
   index,
   name,
+  projectType,
   description,
   tags,
   image,
@@ -66,10 +67,11 @@ const ProjectCard = ({
         </div>
 
         {/* Project Name */}
-        <div className="mt-5">
+        <div className="mt-5 inline-flex  gap-0">
           <a href={live_link} target="_blank" rel="noopener noreferrer">
-            <h3 className="text-white font-bold text-[24px] hover:underline">{name}</h3>
-          </a>
+            <h3 className="text-white font-bold text-[24px] hover:underline">{name}  <span  className="font-semibold text-[8px]">( {projectType} )</span></h3>
+           
+          </a> 
         </div>
 
         {/* Overview with toggle */}
