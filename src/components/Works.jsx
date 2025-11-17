@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-
+import React, { useState, useMemo } from "react";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
-  index,
   name,
   projectType,
   description,
@@ -20,25 +16,14 @@ const ProjectCard = ({
   const overview = description.overview || description.description || "";
   const [showFullOverview, setShowFullOverview] = useState(false);
   const truncateLength = 150;
+
   const toggleOverview = () => setShowFullOverview((prev) => !prev);
 
-  // detect mobile for animation speed
-  const isMobile = window.innerWidth < 768;
-  const animationDelay = isMobile ? index * 0.15 : index * 0.4;
-  const animationDuration = isMobile ? 0.4 : 0.8;
+  // Detect mobile once
+  const isMobile = useMemo(() => window.innerWidth < 768, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: animationDelay,
-        duration: animationDuration,
-        type: "spring",
-      }}
-      viewport={{ once: true, amount: 0.3 }}
-      className="w-full sm:max-w-md mx-auto"
-    >
+    <div className="w-full sm:max-w-md mx-auto mb-6">
       <div className="relative w-full border-white border-2 p-5 rounded-2xl bg-gray-900 transition-transform hover:scale-[1.02] duration-300">
         {/* Project Image */}
         <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
@@ -51,7 +36,9 @@ const ProjectCard = ({
             <img
               src={image}
               alt={`${name} project screenshot`}
-              className="w-full rounded-2xl object-cover sm:group-hover:-translate-y-[230px] transform transition-transform duration-[8s] ease-linear animate-scroll-mobile"
+              className={`w-full rounded-2xl object-cover transform transition-transform duration-[3s] ease-linear ${
+                isMobile ? "translate-none" : "group-hover:-translate-y-[230px] will-change-transform"
+              }`}
               style={{ maxHeight: "460px" }}
             />
           </a>
@@ -69,7 +56,7 @@ const ProjectCard = ({
               <img
                 src={github}
                 alt="GitHub repository icon"
-                className="w-1/2 h-1/2 object-contain hover:object-bottom transition-all duration-1000"
+                className="w-1/2 h-1/2 object-contain hover:object-bottom transition-all duration-500"
               />
             </div>
           )}
@@ -111,55 +98,51 @@ const ProjectCard = ({
         {/* Key Features */}
         {description.key_features && (
           <div className="mt-4">
-            <h4 className="text-white font-semibold mb-2">Key Features:</h4>
-            <ul className="list-disc list-inside text-gray-300 text-[14px] max-h-40 overflow-y-auto space-y-1">
-              {description.key_features.map((feature, idx) => (
-                <li key={`${name}-feature-${idx}`}>{feature}</li>
-              ))}
-            </ul>
+            <h4 className="text-white font-semibold mb-2 cursor-pointer select-none">
+              Key Features {showFullOverview ? "▲" : "▼"}
+            </h4>
+            {showFullOverview && (
+              <ul className="list-disc list-inside text-gray-300 text-[14px] space-y-1">
+                {description.key_features.map((feature, idx) => (
+                  <li key={`${name}-feature-${idx}`}>{feature}</li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
 
         {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
+            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <section id="project" className="scroll-smooth">
-      <motion.div variants={textVariant()}>
+      <div className="mb-6">
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Following projects showcase my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos. It reflects my ability to
-          solve complex problems, work with different technologies, and manage
-          projects effectively.
-        </motion.p>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] mb-10">
+        Following projects showcase my skills and experience through real-world
+        examples of my work. Each project is briefly described with links to
+        code repositories and live demos. It reflects my ability to solve complex
+        problems, work with different technologies, and manage projects effectively.
+      </p>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} {...project} />
         ))}
       </div>
     </section>

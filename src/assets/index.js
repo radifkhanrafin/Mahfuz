@@ -1,6 +1,7 @@
 // Basic Assets
 import logo_m from "./logo_m.svg";
 import facebook from "./tech/facebook.png";
+// import upwork from "./tech/upwork.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -57,6 +58,7 @@ import vijilan from "./Project/vijilan.png";
 export {
   logo_m,
   facebook,
+  // upwork,
   backend,
   creator,
   mobile,
