@@ -17,7 +17,7 @@ const App = () => {
         <Education />
         <Skills />
         <Works />
-        {/* <Experience /> */}
+        <Experience />
 
 
 

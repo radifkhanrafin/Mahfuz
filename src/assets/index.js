@@ -1,7 +1,7 @@
 // Basic Assets
 import logo_m from "./logo_m.svg";
 import facebook from "./tech/facebook.png";
-// import upwork from "./tech/upwork.png";
+
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -53,6 +53,7 @@ import vessel from "./Project/vessel.png";
 import money from "./Project/money.png";
 import resturent from "./Project/resturent.png";
 import vijilan from "./Project/vijilan.png";
+import nearby_blood from "../assets/Project/nearby_blood.png";
 
 // ✅ Final Clean Export
 export {
@@ -103,4 +104,5 @@ export {
   wubcs,
   resturent,
   vijilan,
+  nearby_blood
 };

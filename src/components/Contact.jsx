@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -8,41 +7,20 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleWhatsApp = () => {
     setLoading(true);
 
-    emailjs.sendForm('service_tjpck49', 'template_nuv3tsp', '#myForm').then(
-  (response) => {
-    console.log('SUCCESS!', response.status, response.text);
-  },
-  (error) => {
-    console.log('FAILED...', error);
-  },
-);
-
-    emailjs
-      .sendForm(
-        'service_sxcsjlc',         // Your service ID
-        'template_6sqyumw',        // Your template ID
-        formRef.current,           // The actual form element
-        '2c-QZKQfzxOJDKzuO'        // Your public API key
-      )
-      .then(
-        (result) => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-          e.target.reset(); // Reset the form fields
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error.text);
-          alert(error.text);
-        }
-      );
+    // Your WhatsApp number in international format (without +)
+    const phoneNumber = "+8801621961907"; // replace with your number
+    const message = encodeURIComponent("Hello Mahfuz, I got your contact from your portfolio. I would like to get in touch with you!");
+    
+    // Open WhatsApp link
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, "_blank");
+    
+    setLoading(false);
   };
 
   return (
@@ -54,49 +32,18 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              required
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              required
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              required
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
+        <div className='mt-12 flex flex-col gap-8'>
+          <p className='text-white'>
+            Click the button below to contact me directly via WhatsApp:
+          </p>
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            onClick={handleWhatsApp}
+            className='bg-green-600 hover:bg-green-700 py-3 px-8 rounded-xl w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Opening..." : "Contact via WhatsApp"}
           </button>
-        </form>
+        </div>
       </motion.div>
 
       <motion.div

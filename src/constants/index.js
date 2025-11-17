@@ -39,7 +39,8 @@ import {
   hirewave,
   hex,
   resturent,
-  vijilan
+  vijilan,
+  nearby_blood
 
 } from "../assets";
 
@@ -167,21 +168,21 @@ const technologies = [
 
 const education = [
   {
-    degree: "Bachelor of Science (BSc)",
+    degree: " B.Sc in Computer Science Engineering",
     logo: wub,
     logobg: '#FFFFFF',
 
-    status: "Running",
-    dept: "Computer Science and Engineering", // or your actual field
-    institution: "World University of Bangladesh", // or your actual university
-    year: "2028" // replace with actual graduation year
+    status: "Complete",
+    dept: "Computer Science and Engineering",
+    institution: "World University of Bangladesh",
+    year: "2024"
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
     logo: bulbul,
     status: "Passed",
     dept: 'Science',
-    institution: "Shahid Bulbul Govt. Collage", // replace with your actual college
+    institution: "Shahid Bulbul Govt. Collage",
     year: "2021"
   }
 ];
@@ -266,7 +267,7 @@ const projects = [
   // hire wave
   {
     name: "Hire Wave -Hiring Agency",
-    projectType :" ",
+    projectType: " ",
     team: true,
     description:
     {
@@ -316,7 +317,7 @@ const projects = [
   //vijilin
   {
     name: "Vijilan - Cybersecurity Solutions Platform ",
-     projectType :"Client Project",
+    projectType: "Client Project",
     team: false,
     description: {
       "overview": "Vijilan is a comprehensive React-based web application designed for a cybersecurity company specializing in Managed Service Provider (MSP) solutions, threat response, and compliance services. The platform offers a rich set of features to support MSP partners and provide clients with detailed analytics, resources, and case studies.",
@@ -360,12 +361,61 @@ const projects = [
   }
   ,
 
+  // Nearby Blood
+  {
+    name: "Nearby Blood",
+    projectType: " ",
+    team: false,
+    description: {
+      description: "Nearby Blood is a platform designed to connect blood donors with recipients nearby. It ensures timely access to blood during emergencies by allowing users to find, contact, and request blood from nearby donors efficiently. The platform includes real-time notifications, profiles, and an admin panel for smooth management.",
+      key_features: [
+        "Donor & Recipient Registration: Users can register as blood donors or recipients.",
+        "Search Nearby Donors: Find donors by blood group and location.",
+        "Real-Time Notifications: Donors get instant alerts when blood is requested.",
+        "Profile Management: View and update donor or recipient profiles.",
+        "Admin Panel: Manage users and blood requests efficiently.",
+        "Secure Authentication: Login/Register with JWT or OAuth.",
+        "Emergency Requests: Quick request feature for urgent situations.",
+        "Direct Contact: Contact donors via phone, email, or WhatsApp."
+      ]
+    },
+    tags: [
+      {
+        name: "next.js",
+        color: "pink-text-gradient"
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient"
+      },
 
+      {
+        name: "node.js",
+        color: "green-text-gradient"
+      },
+      {
+        name: "express.js",
+        color: "pink-text-gradient"
+      },
+      {
+        "name": "mongodb",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "tailwind",
+        "color": "pink-text-gradient"
+      }
+    ],
+    image: nearby_blood,
+    source_code_link_client: "https://github.com/yourusername/nearby-blood-client",
+    source_code_link_server: "https://github.com/yourusername/nearby-blood-server",
+    live_link: "https://nearby-blood.vercel.app/"
+  } ,
   // resturent
 
   {
     name: "Restaurant Management Website ",
-     projectType :"Client Project",
+    projectType: "Client Project",
     team: false,
     description: {
       "overview": "The Restaurant Management Website is a modern, responsive platform designed to streamline both customer ordering and restaurant administration. It features separate dashboards for customers and admins, ensuring a smooth and efficient workflow for both sides of the business. Built with Next.js, Tailwind CSS, and TypeScript, the site offers high performance, a clean design, and user-friendly navigation.",
@@ -402,10 +452,13 @@ const projects = [
   }
   ,
 
+
+
+
   // Any Vessel
   {
     name: "Any Vessel   ",
-     projectType :"Client Project",
+    projectType: "Client Project",
     team: true,
     description:
     {
@@ -454,7 +507,7 @@ const projects = [
   // Legal Lawyer
   {
     name: "Legal Lawyer  ",
-     projectType :" ",
+    projectType: " ",
     team: false,
     description:
     {
@@ -500,7 +553,7 @@ const projects = [
   // Wub computer Club
   {
     name: "WUB Computer Society",
-     projectType :" ",
+    projectType: " ",
     team: false,
     description:
     {
