@@ -147,9 +147,9 @@ const Navbar = () => {
                   exit={{ y: -20, opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => setToggle(false)}
-                  className="text-white text-xl font-bold mb-10 p-2 rounded-full border-2 border-white hover:bg-white hover:text-[#050816] transition-all duration-300"
+                  className="text-white text-xl font-bold mb-10 p-2 rounded-full   hover:bg-white hover:text-[#050816] transition-all duration-300"
                 >
-                  ✕ Close
+                  ✕  Close
                 </motion.button>
 
                 {/* Nav Items */}
