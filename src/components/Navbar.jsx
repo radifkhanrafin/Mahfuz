@@ -137,7 +137,7 @@ const Navbar = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: .75 }}
                 className="fixed top-0 left-0 w-full h-screen z-50 backdrop-blur-xl bg-[#050816]/95 flex flex-col items-center pt-20"
               >
                 {/* Animated Close Button */}
@@ -145,7 +145,7 @@ const Navbar = () => {
                   initial={{ y: -20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1 }}
                   onClick={() => setToggle(false)}
                   className="text-white text-xl font-bold mb-10 p-2 rounded-full   hover:bg-white hover:text-[#050816] transition-all duration-300"
                 >
@@ -161,10 +161,10 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       exit={{ x: 100, opacity: 0 }}
                       transition={{
-                        delay: 0.1 * index,
+                        delay: 0.2 * index,
                         type: "tween",
                         ease: "easeOut",
-                        duration: 0.3,
+                        duration: 0.4,
                       }}
                       className={`text-[22px] font-semibold cursor-pointer transition-all duration-200 ${
                         active === nav.title ? "text-white" : "text-gray-300"

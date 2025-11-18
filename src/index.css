@@ -22,9 +22,8 @@ html {
 }
 /* Thin Vertical Timeline Line */
 .vertical-timeline::before {
-  width: 2px !important;      
-  background: #6f42c1 !important;  
-  /* left: 50% !important;      */
+  width: 3px !important;      
+  background: #6f42c1 !important;   
 }
 
 
