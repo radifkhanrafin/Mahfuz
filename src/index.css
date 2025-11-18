@@ -20,6 +20,13 @@ html {
   padding-bottom: 100px;
   display: block;
 }
+/* Thin Vertical Timeline Line */
+.vertical-timeline::before {
+  width: 2px !important;      
+  background: #6f42c1 !important;  
+  /* left: 50% !important;      */
+}
+
 
 .primary-bg{
   background-color: #050816;

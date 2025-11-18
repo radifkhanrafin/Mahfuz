@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { menu, close, github, logo_m, facebook,  } from "../assets";
+import { menu, close, github, logo_m, facebook } from "../assets";
 import linkedin from "../assets/linkedin.svg";
 
 const Navbar = () => {
@@ -11,29 +11,33 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // 🔹 Debounced Scroll Listener
+  // Scroll listener
   useEffect(() => {
     let timeout;
     const handleScroll = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         setScrolled(window.scrollY > 100);
-      }, 50); // 50ms delay for performance
+      }, 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu open
+  useEffect(() => {
+    document.body.style.overflow = toggle ? "hidden" : "auto";
+  }, [toggle]);
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ease-in-out ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 transition-colors duration-300 ease-in-out ${
+        scrolled ? "bg-[#0b0b1c]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo + Social Icons */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           <Link
             to="/"
             className="flex items-center gap-2"
@@ -42,40 +46,70 @@ const Navbar = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <img src={logo_m} alt="logo" className="w-9 h-9 object-contain" />
+            <img src={logo_m} alt="logo" className="w-10 h-10 object-contain" />
             <p className="text-white text-[18px] font-bold cursor-pointer flex">
               Mahfuz &nbsp;
-              <span className="sm:block hidden"> | Full-Stack Developer</span>
+              <span className="sm:block hidden">| Full-Stack Developer</span>
             </p>
           </Link>
 
-          <div className="flex gap-4 ml-5">
-            <a href="https://www.facebook.com/mahfuz.web.dev" target="_blank">
+          {/* Social Icons */}
+          <div className="flex gap-3 ml-4">
+            <a
+              href="https://www.facebook.com/mahfuz.web.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-all hover:scale-110"
+            >
               <img src={facebook} alt="facebook" className="w-9 h-9" />
             </a>
             <a
-              href="www.linkedin.com/in/mahfuz-web-dev"
+              href="https://www.linkedin.com/in/mahfuz-web-dev"
               target="_blank"
+              rel="noreferrer"
+              className="transition-all hover:scale-110"
             >
-              <img src={linkedin} alt="linkedin" className="w-9 h-9 border-2 border-blue-500 rounded-xl" />
+              <img
+                src={linkedin}
+                alt="linkedin"
+                className="w-9 h-9 border-2 border-blue-500 rounded-xl"
+              />
             </a>
-            <a href="https://github.com/radifkhanrafin" target="_blank">
-              <img src={github} alt="github" className="w-9 h-9 border-white rounded-full p-1" />
+            <a
+              href="https://github.com/radifkhanrafin"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-all hover:scale-110"
+            >
+              <img
+                src={github}
+                alt="github"
+                className="w-9 h-9 border-white rounded-full p-1"
+              />
             </a>
-            <a href="https://www.upwork.com/freelancers/~011dbc167e1a463e39" target="_blank">
-              <img src="https://i.ibb.co.com/PsW9K3gJ/png-clipart-upwork-computer-icons-freelancer-others-miscellaneous-text-thumbnail.png" alt="upwork" className="rounded-full w-9 h-9" />
+            <a
+              href="https://www.upwork.com/freelancers/~011dbc167e1a463e39"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-all hover:scale-110"
+            >
+              <img
+                src="https://i.ibb.co.com/PsW9K3gJ/png-clipart-upwork-computer-icons-freelancer-others-miscellaneous-text-thumbnail.png"
+                alt="upwork"
+                className="w-9 h-9 rounded-full"
+              />
             </a>
           </div>
         </div>
 
         {/* Desktop Navigation Links */}
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`text-[18px] font-medium cursor-pointer transition-all duration-200 ${
+                active === nav.title ? "text-white" : "text-gray-400"
+              } hover:text-white`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -84,41 +118,47 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex flex-1 justify-end items-center relative">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="w-[28px] h-[28px] object-contain cursor-pointer transition-all duration-200 hover:scale-110"
             onClick={() => setToggle(!toggle)}
           />
 
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          {/* Full Screen Animated Menu */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={toggle ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className={`fixed top-0 left-0 w-full h-screen z-50 backdrop-blur-xl bg-[#050816]/95 flex justify-center items-start pt-32`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
+            <ul className="list-none flex flex-col gap-8 text-center">
+              {navLinks.map((nav, index) => (
+                <motion.li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={toggle ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                  transition={{
+                    delay: 0.1 * index,
+                    type: "spring",
+                    stiffness: 80,
+                  }}
+                  className={`text-[22px] font-semibold cursor-pointer transition-all duration-200 ${
+                    active === nav.title ? "text-white" : "text-gray-300"
+                  } hover:text-white hover:scale-110`}
                   onClick={() => {
                     setToggle(false);
                     setActive(nav.title);
-                    // Smooth scroll to section
                     const element = document.getElementById(nav.id);
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   {nav.title}
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
     </nav>
