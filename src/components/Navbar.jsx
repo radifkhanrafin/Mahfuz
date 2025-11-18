@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close, github, logo_m, facebook } from "../assets";
@@ -32,7 +32,9 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 transition-colors duration-300 ease-in-out ${
-        scrolled ? "bg-[#0b0b1c]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        scrolled
+          ? "bg-[#0b0b1c]/90 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -54,12 +56,12 @@ const Navbar = () => {
           </Link>
 
           {/* Social Icons */}
-          <div className="flex gap-3 ml-4">
+          <div className="flex gap-3 justify-center md:justify-center ml-0 md:ml-4">
             <a
               href="https://www.facebook.com/mahfuz.web.dev"
               target="_blank"
               rel="noreferrer"
-              className="transition-all hover:scale-110"
+              className="transition-all hover:scale-110 hidden lg:inline-block"
             >
               <img src={facebook} alt="facebook" className="w-9 h-9" />
             </a>
@@ -84,7 +86,7 @@ const Navbar = () => {
               <img
                 src={github}
                 alt="github"
-                className="w-9 h-9 border-white rounded-full p-1"
+                className="w-9 h-9 border-2 border-white rounded-full p-1"
               />
             </a>
             <a
@@ -122,43 +124,66 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer transition-all duration-200 hover:scale-110"
+            className={`w-[28px] h-[28px] object-contain cursor-pointer transition-all duration-300 ${
+              toggle ? "filter invert" : ""
+            }`}
             onClick={() => setToggle(!toggle)}
           />
 
           {/* Full Screen Animated Menu */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={toggle ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className={`fixed top-0 left-0 w-full h-screen z-50 backdrop-blur-xl bg-[#050816]/95 flex justify-center items-start pt-32`}
-          >
-            <ul className="list-none flex flex-col gap-8 text-center">
-              {navLinks.map((nav, index) => (
-                <motion.li
-                  key={nav.id}
-                  initial={{ x: 100, opacity: 0 }}
-                  animate={toggle ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
-                  transition={{
-                    delay: 0.1 * index,
-                    type: "spring",
-                    stiffness: 80,
-                  }}
-                  className={`text-[22px] font-semibold cursor-pointer transition-all duration-200 ${
-                    active === nav.title ? "text-white" : "text-gray-300"
-                  } hover:text-white hover:scale-110`}
-                  onClick={() => {
-                    setToggle(false);
-                    setActive(nav.title);
-                    const element = document.getElementById(nav.id);
-                    if (element) element.scrollIntoView({ behavior: "smooth" });
-                  }}
+          <AnimatePresence>
+            {toggle && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="fixed top-0 left-0 w-full h-screen z-50 backdrop-blur-xl bg-[#050816]/95 flex flex-col items-center pt-20"
+              >
+                {/* Animated Close Button */}
+                <motion.button
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => setToggle(false)}
+                  className="text-white text-xl font-bold mb-10 p-2 rounded-full border-2 border-white hover:bg-white hover:text-[#050816] transition-all duration-300"
                 >
-                  {nav.title}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+                  ✕ Close
+                </motion.button>
+
+                {/* Nav Items */}
+                <ul className="list-none flex flex-col gap-8 text-center">
+                  {navLinks.map((nav, index) => (
+                    <motion.li
+                      key={nav.id}
+                      initial={{ x: 100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: 100, opacity: 0 }}
+                      transition={{
+                        delay: 0.1 * index,
+                        type: "tween",
+                        ease: "easeOut",
+                        duration: 0.3,
+                      }}
+                      className={`text-[22px] font-semibold cursor-pointer transition-all duration-200 ${
+                        active === nav.title ? "text-white" : "text-gray-300"
+                      } hover:text-white hover:scale-110`}
+                      onClick={() => {
+                        setToggle(false);
+                        setActive(nav.title);
+                        const element = document.getElementById(nav.id);
+                        if (element)
+                          element.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      {nav.title}
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </nav>

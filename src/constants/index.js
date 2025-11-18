@@ -220,7 +220,7 @@ const experiences = [
   {
     title: "MERN Stack Developer",
     company_name: "Local Market Solutions",
-    icon: 'localMarketIcon',  // Replace with your actual icon or logo import
+    icon: "https://i.ibb.co.com/PsW9K3gJ/png-clipart-upwork-computer-icons-freelancer-others-miscellaneous-text-thumbnail.png",  
     iconBg: "#1F2937",      // A dark gray background for contrast
     date: "January 2022 - Present",
     points: [
