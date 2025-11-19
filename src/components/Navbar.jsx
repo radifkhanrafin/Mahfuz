@@ -132,58 +132,56 @@ const Navbar = () => {
 
           {/* Full Screen Animated Menu */}
           <AnimatePresence>
-            {toggle && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: .75 }}
-                className="fixed top-0 left-0 w-full h-screen z-50 backdrop-blur-xl bg-[#050816]/95 flex flex-col items-center pt-20"
-              >
-                {/* Animated Close Button */}
-                <motion.button
-                  initial={{ y: -20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -20, opacity: 0 }}
-                  transition={{ duration: 1 }}
-                  onClick={() => setToggle(false)}
-                  className="text-white text-xl font-bold mb-10 p-2 rounded-full   hover:bg-white hover:text-[#050816] transition-all duration-300"
-                >
-                  ✕  Close
-                </motion.button>
+  {toggle && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{
+        duration: 0.25,
+        ease: "easeOut"
+      }}
+      className="fixed top-0 left-0 w-full h-screen z-50 bg-[#050816]/95 flex flex-col items-center pt-20"
+    >
+      {/* Close Button */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        onClick={() => setToggle(false)}
+        className="text-white text-xl font-bold mb-10 p-2 rounded-full hover:bg-white hover:text-[#050816] transition-all duration-200"
+      >
+        ✕ Close
+      </motion.button>
 
-                {/* Nav Items */}
-                <ul className="list-none flex flex-col gap-8 text-center">
-                  {navLinks.map((nav, index) => (
-                    <motion.li
-                      key={nav.id}
-                      initial={{ x: 100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
-                      transition={{
-                        delay: 0.2 * index,
-                        type: "tween",
-                        ease: "easeOut",
-                        duration: 0.4,
-                      }}
-                      className={`text-[22px] font-semibold cursor-pointer transition-all duration-200 ${
-                        active === nav.title ? "text-white" : "text-gray-300"
-                      } hover:text-white hover:scale-110`}
-                      onClick={() => {
-                        setToggle(false);
-                        setActive(nav.title);
-                        const element = document.getElementById(nav.id);
-                        if (element)
-                          element.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      {nav.title}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
+      {/* Nav Items */}
+      <ul className="list-none flex flex-col gap-6 text-center">
+        {navLinks.map((nav) => (
+          <motion.li
+            key={nav.id}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className={`text-[20px] font-semibold cursor-pointer transition-all duration-150 ${
+              active === nav.title ? "text-white" : "text-gray-300"
+            } hover:text-white hover:scale-105`}
+            onClick={() => {
+              setToggle(false);
+              setActive(nav.title);
+              const element = document.getElementById(nav.id);
+              if (element) element.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            {nav.title}
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  )}
+</AnimatePresence>
+
         </div>
       </div>
     </nav>
