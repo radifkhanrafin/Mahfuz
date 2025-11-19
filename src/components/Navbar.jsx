@@ -120,8 +120,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden flex flex-1 justify-end items-center relative">
-          <h3>this is navbar for mobile</h3>
+        <div className="sm:hidden flex flex-1 justify-end items-center relative"> 
           <img
             src={toggle ? close : menu}
             alt="menu"
