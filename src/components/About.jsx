@@ -93,7 +93,7 @@ const About = () => {
           {/* Experience Tag */}
           <div className="-mt-[45px] text-center">
             <span className="inline-block px-4 py-1   font-semibold  bg-black text-white  rounded-full shadow-md">
-              2.5 Years+
+              3.5 Years+
             </span>
           </div>
         </div>
