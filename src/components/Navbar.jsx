@@ -31,11 +31,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 transition-colors duration-300 ease-in-out ${
-        scrolled
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 transition-colors duration-300 ease-in-out ${scrolled
           ? "bg-[#0b0b1c]/90 backdrop-blur-md shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo + Social Icons */}
@@ -109,9 +108,8 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`text-[18px] font-medium cursor-pointer transition-all duration-200 ${
-                active === nav.title ? "text-white" : "text-gray-400"
-              } hover:text-white`}
+              className={`text-[18px] font-medium cursor-pointer transition-all duration-200 ${active === nav.title ? "text-white" : "text-gray-400"
+                } hover:text-white`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -120,67 +118,65 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden flex flex-1 justify-end items-center relative"> 
+        <div className="sm:hidden flex flex-1 justify-end items-center relative">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className={`w-[28px] h-[28px] object-contain cursor-pointer transition-all duration-300 ${
-              toggle ? "filter invert" : ""
-            }`}
+            className={`w-[28px] h-[28px] object-contain cursor-pointer transition-all duration-300 ${toggle ? "filter invert" : ""
+              }`}
             onClick={() => setToggle(!toggle)}
           />
 
           {/* Full Screen Animated Menu */}
           <AnimatePresence>
-  {toggle && (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{
-        duration: 0.25,
-        ease: "easeOut"
-      }}
-      className="fixed top-0 left-0 w-full h-screen z-50 bg-[#050816]/95 flex flex-col items-center pt-20"
-    >
-      {/* Close Button */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        onClick={() => setToggle(false)}
-        className="text-white text-xl font-bold mb-10 p-2 rounded-full hover:bg-white hover:text-[#050816] transition-all duration-200"
-      >
-        ✕ Close
-      </motion.button>
+            {toggle && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{
+                  duration: 0.25,
+                  ease: "easeOut"
+                }}
+                className="fixed top-0 left-0 w-full h-screen z-50 bg-[#050816]/95 flex flex-col items-center pt-20"
+              >
+                {/* Close Button */}
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  onClick={() => setToggle(false)}
+                  className="text-white text-xl font-bold mb-10 p-2 rounded-full hover:bg-white hover:text-[#050816] transition-all duration-200"
+                >
+                  ✕ Close
+                </motion.button>
 
-      {/* Nav Items */}
-      <ul className="list-none flex flex-col gap-6 text-center">
-        {navLinks.map((nav) => (
-          <motion.li
-            key={nav.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className={`text-[20px] font-semibold cursor-pointer transition-all duration-150 ${
-              active === nav.title ? "text-white" : "text-gray-300"
-            } hover:text-white hover:scale-105`}
-            onClick={() => {
-              setToggle(false);
-              setActive(nav.title);
-              const element = document.getElementById(nav.id);
-              if (element) element.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            {nav.title}
-          </motion.li>
-        ))}
-      </ul>
-    </motion.div>
-  )}
-</AnimatePresence>
+                {/* Nav Items */}
+                <ul className="list-none flex flex-col gap-6 text-center">
+                  {navLinks.map((nav) => (
+                    <motion.li
+                      key={nav.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className={`text-[20px] font-semibold cursor-pointer transition-all duration-150 ${active === nav.title ? "text-white" : "text-gray-300"
+                        } hover:text-white hover:scale-105`}
+                      onClick={() => {
+                        setToggle(false);
+                        setActive(nav.title);
+                        const element = document.getElementById(nav.id);
+                        if (element) element.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      {nav.title}
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
         </div>
       </div>

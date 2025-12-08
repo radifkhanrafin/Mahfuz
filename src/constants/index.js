@@ -266,46 +266,29 @@ const testimonials = [
 const projects = [
   // hire wave
   {
-    name: "Hire Wave -Hiring Agency",
-    projectType: " ",
+    name: "Hire Wave - Hiring Agency",
+    projectType: "Client Project",
+    category: "Web App", // <-- added
     team: true,
-    description:
-    {
-      "description": "Celebrating the creation of Hirewave: A game-changing hiring agency that connects businesses with top global talent effortlessly. Our unique approach to recruitment, combining cutting-edge technology with personalized service, has already transformed countless organizations. With Hirewave...",
+    description: {
+      "description": "Celebrating the creation of Hirewave: A game-changing hiring agency that connects businesses with top global talent effortlessly...",
       "key_features": [
-        "Talent Marketplace: A diverse pool of vetted professionals across various industries and skill levels.",
-        "Simple Matching System: Streamlined tools to help businesses find suitable candidates based on skills, experience, and availability.",
-        "Secure Payments: An integrated payment system ensuring safe and timely transactions between clients and freelancers.",
-        "Project Management Tools: Features like time tracking, file sharing, and task updates to support smooth project execution.",
-        "Review and Rating System: A transparent feedback system for both clients and freelancers to promote accountability.",
-        "Custom Job Posting: Employers can create detailed job listings with clear requirements, budgets, and deadlines.",
-        "Real-Time Messaging: Built-in chat system for immediate and organized communication between clients and freelancers.",
-        "Global Reach: Enables connections between businesses and skilled professionals worldwide, regardless of location."
+        "Talent Marketplace...",
+        "Simple Matching System...",
+        "Secure Payments...",
+        "Project Management Tools...",
+        "Review and Rating System...",
+        "Custom Job Posting...",
+        "Real-Time Messaging...",
+        "Global Reach..."
       ]
-    }
-    ,
+    },
     tags: [
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "fire-base",
-        color: "green-text-gradient",
-      },
-
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "express.js", color: "pink-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "fire-base", color: "green-text-gradient" }
     ],
     image: hirewave,
     source_code_link_client: "https://github.com/ProgrammerShipon/HireWave-Client",
@@ -313,268 +296,208 @@ const projects = [
     live_link: "https://hire-wave.web.app/",
   },
 
-
-  //vijilin
+  // Vijilan
   {
-    name: "Vijilan - Cybersecurity Solutions Platform ",
+    name: "Vijilan - Cybersecurity Solutions Platform",
     projectType: "Client Project",
+    category: "Web App",
     team: false,
-    description: {
-      "overview": "Vijilan is a comprehensive React-based web application designed for a cybersecurity company specializing in Managed Service Provider (MSP) solutions, threat response, and compliance services. The platform offers a rich set of features to support MSP partners and provide clients with detailed analytics, resources, and case studies.",
-      "key_features": [
-        "Multi-page Application: Over 50 routes covering a wide range of cybersecurity services and solutions.",
-        "Responsive Design: Built with Tailwind CSS for seamless access across desktops, tablets, and mobile devices.",
-        "MSP Partner Programs: Automation-focused tools and resources tailored for MSP partners.",
-        "Case Studies: Showcasing successful cybersecurity implementations and client outcomes.",
-        "Blog System: Includes landing pages and post management for sharing industry insights and updates.",
-        "Dashboard: Analytics and reporting features to track service performance and security metrics.",
-        "Pricing Tools: Dynamic pricing calculators for MSP services.",
-        "Resource Center: Comprehensive documentation, guides, and support materials.",
-        "Professional Services Portfolio: Detailed showcase of cybersecurity services offered."
+    description: { 
+      overview: "Vijilan is a comprehensive React-based web application...",
+      key_features: [
+        "Multi-page Application...",
+        "Responsive Design...",
+        "MSP Partner Programs...",
+        "Case Studies...",
+        "Blog System...",
+        "Dashboard...",
+        "Pricing Tools...",
+        "Resource Center...",
+        "Professional Services Portfolio..."
       ]
     },
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "vite",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react-router",
-        color: "green-text-gradient",
-      },
-      {
-        name: "npm",
-        color: "yellow-text-gradient",
-      }
+      { name: "react", color: "blue-text-gradient" },
+      { name: "vite", color: "pink-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "react-router", color: "green-text-gradient" },
+      { name: "npm", color: "yellow-text-gradient" }
     ],
     image: vijilan,
     source_code_link_client: " ",
     live_link: "https://vijilin.vercel.app/"
-  }
-  ,
+  },
 
   // Nearby Blood
   {
     name: "Nearby Blood",
-    projectType: " ",
+    projectType: "Personal/Client Project",
+    category: "Web App",
     team: false,
     description: {
-      description: "Nearby Blood is a platform designed to connect blood donors with recipients nearby. It ensures timely access to blood during emergencies by allowing users to find, contact, and request blood from nearby donors efficiently. The platform includes real-time notifications, profiles, and an admin panel for smooth management.",
+      description: "Nearby Blood is a platform designed to connect blood donors...",
       key_features: [
-        "Donor & Recipient Registration: Users can register as blood donors or recipients.",
-        "Search Nearby Donors: Find donors by blood group and location.",
-        "Real-Time Notifications: Donors get instant alerts when blood is requested.",
-        "Profile Management: View and update donor or recipient profiles.",
-        "Admin Panel: Manage users and blood requests efficiently.",
-        "Secure Authentication: Login/Register with JWT or OAuth.",
-        "Emergency Requests: Quick request feature for urgent situations.",
-        "Direct Contact: Contact donors via phone, email, or WhatsApp."
+        "Donor & Recipient Registration...",
+        "Search Nearby Donors...",
+        "Real-Time Notifications...",
+        "Profile Management...",
+        "Admin Panel...",
+        "Secure Authentication...",
+        "Emergency Requests...",
+        "Direct Contact..."
       ]
     },
     tags: [
-      {
-        name: "next.js",
-        color: "pink-text-gradient"
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient"
-      },
-
-      {
-        name: "node.js",
-        color: "green-text-gradient"
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient"
-      },
-      {
-        "name": "mongodb",
-        "color": "green-text-gradient"
-      },
-      {
-        "name": "tailwind",
-        "color": "pink-text-gradient"
-      }
+      { name: "next.js", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "express.js", color: "pink-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" }
     ],
     image: nearby_blood,
     source_code_link_client: "https://github.com/yourusername/nearby-blood-client",
     source_code_link_server: "https://github.com/yourusername/nearby-blood-server",
     live_link: "https://nearby-blood.vercel.app/"
-  } ,
-  // resturent
+  },
 
+  // WhatsApp Automation
   {
-    name: "Restaurant Management Website ",
-    projectType: "Client Project",
+    name: "WhatsApp Automation Workflow",
+    projectType: "Automation Project",
+    category: "Automation", // <-- added
     team: false,
     description: {
-      "overview": "The Restaurant Management Website is a modern, responsive platform designed to streamline both customer ordering and restaurant administration. It features separate dashboards for customers and admins, ensuring a smooth and efficient workflow for both sides of the business. Built with Next.js, Tailwind CSS, and TypeScript, the site offers high performance, a clean design, and user-friendly navigation.",
-      "key_features": [
-        "Customer Dashboard: Allows customers to browse the menu, add items to their cart, place orders, and track order status in real time.",
-        "Admin Dashboard: Enables administrators to manage menu items, update prices, view and process orders, and oversee customer interactions.",
-        "Order Management: Utilizes Local Storage to handle session-based order tracking, ensuring smooth performance without requiring a backend database.",
-        "Responsive Design: Fully optimized for desktop, tablet, and mobile devices for a seamless user experience.",
-        "Fast and SEO-Friendly: Powered by Next.js to deliver quick load times and better search engine visibility.",
-        "Modern UI: Styled with Tailwind CSS for a clean, visually appealing, and easy-to-use interface."
+      description: "A WhatsApp automation workflow designed to streamline business communication...",
+      key_features: [
+        "Automated Messaging...",
+        "Reminders & Notifications...",
+        "Real-Time Data Sync...",
+        "Scalable Workflow...",
+        "Error Handling & Logging...",
+        "Integration Ready..."
       ]
     },
     tags: [
-      {
-        name: "next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "local-storage",
-        color: "green-text-gradient",
-      }
+      { name: "n8n", color: "pink-text-gradient" },
+      { name: "whatsapp-api", color: "green-text-gradient" },
+      { name: "firebase", color: "green-text-gradient" },
+      { name: "automation", color: "blue-text-gradient" },
+      { name: "workflow", color: "pink-text-gradient" }
+    ],
+    image: "whatsappAutomationImage",
+    source_code_link_client: "https://github.com/YourUsername/WhatsApp-Automation-Client",
+    source_code_link_server: "https://github.com/YourUsername/WhatsApp-Automation-Server",
+    live_link: "https://your-live-demo-link.com",
+  },
+
+  // Restaurant Management
+  {
+    name: "Restaurant Management Website",
+    projectType: "Client Project",
+    category: "Web App",
+    team: false,
+    description: {
+      overview: "The Restaurant Management Website is a modern, responsive platform...",
+      key_features: [
+        "Customer Dashboard...",
+        "Admin Dashboard...",
+        "Order Management...",
+        "Responsive Design...",
+        "Fast and SEO-Friendly...",
+        "Modern UI..."
+      ]
+    },
+    tags: [
+      { name: "next.js", color: "blue-text-gradient" },
+      { name: "typescript", color: "pink-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "local-storage", color: "green-text-gradient" }
     ],
     image: resturent,
     source_code_link_client: "",
     live_link: "https://hungry-me.vercel.app/"
-  }
-  ,
-
-
-
+  },
 
   // Any Vessel
   {
-    name: "Any Vessel   ",
+    name: "Any Vessel",
     projectType: "Client Project",
+    category: "Web App",
     team: true,
-    description:
-    {
-      "description": "Introducing Any Vessel – a comprehensive platform dedicated to everything related to vessels. Whether you're looking to sell or buy a vessel, hire a crew, or find a maritime job, Any Vessel simplifies it all in one unified space. Built with a focus on the marine industry, it offers seamless interactions between vessel owners, shipping companies, and seafarers across the globe.",
-      "key_features": [
-        "Vessel Marketplace: A specialized section for listing and browsing vessels for sale, covering all types and sizes.",
-        "Crew Hiring: Vessel owners and operators can easily post crew requirements and connect with qualified maritime professionals.",
-        "Job Listings: Seafarers can explore and apply to job opportunities tailored to their rank, expertise, and desired location.",
-        "Secure Transactions: Safe and trusted payment processing for services and vessel-related deals.",
-        "Profile Management: Detailed profiles for both companies and individuals, highlighting experience, certifications, and availability.",
-        "Real-Time Messaging: Instant communication tools to coordinate sales, job offers, and crew arrangements.",
-        "Verified Listings: All vessels and job posts are verified for authenticity to ensure trust and professionalism.",
-        "Global Network: Connect with maritime professionals and businesses from around the world with ease."
+    description: {
+      description: "Introducing Any Vessel – a comprehensive platform dedicated to everything related to vessels...",
+      key_features: [
+        "Vessel Marketplace...",
+        "Crew Hiring...",
+        "Job Listings...",
+        "Secure Transactions...",
+        "Profile Management...",
+        "Real-Time Messaging...",
+        "Verified Listings...",
+        "Global Network..."
       ]
-    }
-
-    ,
+    },
     tags: [
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "fire-base",
-        color: "green-text-gradient",
-      },
-
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "express.js", color: "pink-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "fire-base", color: "green-text-gradient" }
     ],
     image: vessel,
     source_code_link_client: "https://github.com/foridislam332/anyvessel-client/tree/Mahfuz",
     source_code_link_server: "https://github.com/rayhanrayhan/anyvessel-server/tree/Mahfuz",
-    live_link: "https://cheerful-cucurucho-60f8c8.netlify.app/",
+    live_link: "https://cheerful-cucurucho-60f8c8.netlify.app/"
   },
+
   // Legal Lawyer
   {
-    name: "Legal Lawyer  ",
-    projectType: " ",
+    name: "Legal Lawyer",
+    projectType: "Client Project",
+    category: "Web App",
     team: false,
-    description:
-    {
-      "overview": "The Legal Lawyer Website is an innovative platform designed to connect individuals seeking legal assistance with qualified lawyers. The website features an intuitive interface and a robust chat system that facilitates real-time communication between users and legal professionals.",
-      "key_features": [
-        "Chat System: Users can engage in live chat with lawyers to discuss their legal concerns, receive guidance, and schedule consultations, ensuring quick and efficient communication.",
-        "Lawyer Directory: A comprehensive directory allows users to search for lawyers based on their specialties, location, and user ratings, making it easier to find the right legal expert. User Profiles: Individuals can create personal profiles to track their inquiries, consultations, and any ongoing legal matters, providing a personalized experience.",
-        "Resources and Articles: The website includes a section with legal resources and informative articles, helping users understand various legal topics and their rights.",
-        "Secure Communication: All interactions on the platform are secured to protect user privacy and ensure confidentiality."
+    description: {
+      overview: "The Legal Lawyer Website is an innovative platform designed to connect individuals seeking legal assistance...",
+      key_features: [
+        "Chat System...",
+        "Lawyer Directory...",
+        "User Profiles...",
+        "Resources and Articles...",
+        "Secure Communication..."
       ]
-    }
-    ,
+    },
     tags: [
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "fire-base",
-        color: "green-text-gradient",
-      },
-
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "express.js", color: "pink-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "fire-base", color: "green-text-gradient" }
     ],
     image: lawyer,
-    // source_code_link_client: " ",
-    // source_code_link_server: " ",
     source_code_link_client: "https://github.com/radifkhanrafin/Legal_lawyer",
     source_code_link_server: "https://github.com/radifkhanrafin/legal_lawyer_server",
-    live_link: "https://grand-centaur-e1b3c6.netlify.app/",
+    live_link: "https://grand-centaur-e1b3c6.netlify.app/"
   },
-  // Wub computer Club
+
+  // WUB Computer Club
   {
     name: "WUB Computer Society",
-    projectType: " ",
+    projectType: "Student/Club Project",
+    category: "Community/Tech Club", // <-- added
     team: false,
-    description:
-    {
-      "description": "WUBCS (World University of Bangladesh Computer Society) is the official student-run tech community of the CSE Department at the World University of Bangladesh. Dedicated to fostering innovation, collaboration, and technical excellence, WUBCS serves as a platform for students to explore and grow in the fields of programming, robotics, web development, AI, cybersecurity, and more. Through workshops, coding contests, seminars, and national-level tech events, WUBCS empowers students to bridge the gap between academic knowledge and real-world skills, nurturing the next generation of tech leaders."
-    }
-
-
-    ,
+    description: {
+      description: "WUBCS (World University of Bangladesh Computer Society) is the official student-run tech community..."
+    },
     tags: [
-
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-
+      { name: "react", color: "blue-text-gradient" }
     ],
     image: wubcs,
     source_code_link_client: "",
     source_code_link_server: "",
-    live_link: "https://fascinating-panda-892615.netlify.app/",
-  },
+    live_link: "https://fascinating-panda-892615.netlify.app/"
+  }
 ];
+
 
 export { services, technologies, education, experiences, testimonials, projects };

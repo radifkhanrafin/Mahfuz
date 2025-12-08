@@ -1,8 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Works } from "./components";
 import Education from "./components/education";
 import Skills from "./components/Skill";
+import Chat from "./components/chat";
 
 const App = () => {
   return (
@@ -17,6 +18,9 @@ const App = () => {
         <Experience />
         <Feedbacks />
         <Contact />
+     <Chat/>
+
+
       </div>
     </BrowserRouter>
   );
