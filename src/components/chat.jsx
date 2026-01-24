@@ -1,23 +1,30 @@
-import React, { useState } from "react";
-
+import { createChat } from "@n8n/chat";
+import React, { useEffect, useState } from "react";
+import '@n8n/chat/style.css'; 
 const Chat = () => {
-  const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState("");
+  // const [open, setOpen] = useState(false);
+  // const [message, setMessage] = useState("");
 
   // Handle message send
-  const handleSend = () => {
-    if (!message.trim()) return; // empty message stop
+  // const handleSend = () => {
+  //   if (!message.trim()) return; // empty message stop
 
-    console.log("User message:", message);
+  //   console.log("User message:", message);
 
-    // Clear input after sending
-    setMessage("");
-  };
+  //   // Clear input after sending
+  //   setMessage("");
+  // };
+
+  useEffect(() => {
+    createChat({
+      webhookUrl: 'http://localhost:5678/webhook/2d02b6df-a03f-4b5d-ba81-a918d46c75c2/chat'
+    });
+  }, []);
 
   return (
     <>
       {/* Floating Chat Button */}
-      <div
+      {/* <div
         onClick={() => setOpen(true)}
         className="fixed bottom-12 right-10 z-50 group cursor-pointer"
       >
@@ -34,14 +41,15 @@ const Chat = () => {
             </span>
           </>
         )}
-      </div>
+      </div> */}
 
       {/* Chat Box */}
-      {open && (
-        <div className="fixed min-h-[450px] bottom-16 right-10 w-96 bg-white shadow-xl rounded-xl z-50 border border-gray-200 animate-fadeInUp overflow-y-scroll">
+      {/* open && condition */}
+      
+        {/* <div className="fixed min-h-[450px] bottom-16 right-10 w-96 bg-white shadow-xl rounded-xl z-50 border border-gray-200 animate-fadeInUp overflow-y-scroll"> */}
 
           {/* Header */}
-          <div className="flex items-center justify-between p-4 primary-bg text-white rounded-t-xl">
+          {/* <div className="flex items-center justify-between p-4 primary-bg text-white rounded-t-xl">
             <h2 className="text-lg font-semibold">Mahfuz Assistance</h2>
             <button
               className="text-white text-xl"
@@ -49,17 +57,17 @@ const Chat = () => {
             >
               ×
             </button>
-          </div>
+          </div> */}
 
           {/* Messages Area */}
-          <div className="p-4 h-[390px] overflow-y-auto bg-gray-50">
+          {/* <div className="p-4 h-[390px] overflow-y-auto bg-gray-50">
             <div className="primary-bg text-white p-2 mb-3 rounded-lg w-max">
               Hi! How can I help you today?
             </div>
-          </div>
+          </div> */}
 
           {/* Input Box */}
-          <div className="p-3 border-t flex items-center gap-2">
+          {/* <div className="p-3 border-t flex items-center gap-2">
             <input
               type="text"
               placeholder="Type a message..."
@@ -74,9 +82,9 @@ const Chat = () => {
             >
               Send
             </button>
-          </div>
-        </div>
-      )}
+          </div> */}
+        {/* </div> */}
+      
     </>
   );
 };

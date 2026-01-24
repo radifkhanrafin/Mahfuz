@@ -6,6 +6,7 @@ import Skills from "./components/Skill";
 import Chat from "./components/chat";
 
 const App = () => {
+  
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
