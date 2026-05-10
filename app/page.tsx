@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <CursorGlow />
       <Navbar />
-      <main>
+      <main >
         <Hero />
         <About />
         <Services />

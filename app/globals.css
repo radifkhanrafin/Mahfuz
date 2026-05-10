@@ -8,7 +8,28 @@
   --font-sora: 'Sora', sans-serif;
   --font-fira: 'Fira Code', monospace;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
+/* prevent any child from breaking layout */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* extra safety for images / media */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ 
+body {
+  position: relative;
+  overflow-x: hidden;
+}
 * {
   box-sizing: border-box;
   padding: 0;
