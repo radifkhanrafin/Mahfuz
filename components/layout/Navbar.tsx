@@ -130,13 +130,13 @@ export default function Navbar() {
                 ))}
               </div>
  
-              <a
-                href="https://drive.google.com/file/d/1riKm2nwsXUGMs3r68Ya6ZXMIFnwjVr07/view?usp=sharing"
-                target="_blank"
-                className="mt-10 text-center py-3 rounded-xl bg-accent/10 border border-accent/30"
-              >
-                Download Resume
-              </a>
+               <a
+            href="https://drive.google.com/file/d/1riKm2nwsXUGMs3r68Ya6ZXMIFnwjVr07/view?usp=sharing"
+           download
+            className="hidden md:block px-4 py-2 rounded-full bg-accent/10 border border-accent/30 text-sm"
+          >
+            Resume
+          </a>
             </motion.div>
           </>
         )}
