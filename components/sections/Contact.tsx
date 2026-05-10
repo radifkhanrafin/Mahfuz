@@ -205,7 +205,7 @@ export default function Contact() {
                   </motion.button>
                   <button
                     onClick={handleWhatsApp}
-                    className='bg-green-400 hover:bg-green-700 py-3 px-8 rounded-xl w-fit text-white font-bold shadow-md shadow-primary'
+                    className='bg-green-400 w-full lg:w-1/2 hover:bg-green-700 py-3 px-8 rounded-xl  text-white font-bold shadow-md shadow-primary'
                   >
                     {loading ? "Opening..." : "Contact via WhatsApp"}
                   </button>
