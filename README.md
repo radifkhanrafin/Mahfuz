@@ -1,98 +1,125 @@
-<div align="center">
-  <div>
-    <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
-    <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-  </div>
+# 🚀 Developer Portfolio — Next.js 15
 
-  <h3 align="center">A 3D Developer Portfolio</h3>
+A premium personal developer portfolio built with **Next.js 15 App Router**, **Framer Motion**, **Tailwind CSS**, and **TypeScript**.
 
-   
-</div>
+## ✨ Features
 
-## 📋 <a name="table">Table of Contents</a>
+- Dark cinematic UI with glassmorphism
+- Smooth Framer Motion animations throughout
+- Typing effect hero with floating tech badges
+- Animated skills marquee
+- Filterable projects grid
+- Vertical timeline for experience
+- Auto-sliding testimonials
+- Animated contact form
+- Responsive across all devices
+- Custom cursor glow effect
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+## 🛠️ Getting Started
 
+### Prerequisites
+- **Node.js 18+** — [Download here](https://nodejs.org)
+- **npm** (comes with Node.js)
 
-
-## <a name="introduction">🤖 Introduction</a>
-
-By developing this project, you will gain hands-on experience in crafting immersive web experiences, mastering 3D libraries, and implementing engaging animations. The combination of creativity and technical skills showcased in this project serves as an excellent learning opportunity for developers seeking to enhance their portfolio and captivate users with cutting-edge web design.
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- React.js
-- Three.js
-- React Three Fiber
-- React Three Drei
-- Email JS
-- Vite
-- Tailwind CSS
-
-## <a name="features">🔋 Features</a>
-
-👉 **Customizable 3D Hero Section**: Includes a 3D desktop model easily customizable to suit specific needs.
-
-👉 **Interactive Experience and Work Sections**: Utilizes animations powered by framer motion for engaging user experience.
-
-👉 **3D Skills Section**: Showcases skills using 3D geometries through three.js and React Three fiber
-
-👉 **Animated Projects and Testimonials**: Features animated sections using framer motion for projects and client testimonials.
-
-👉 **Contact Section with 3D Earth Model**:Integrates a 3D earth model with email functionality powered by emailjs.
-
-👉 **3D Stars**: Generate stars progressively at random positions using Three.js for background display.
-
-👉 **Consistent Animations**: Implements cohesive animations throughout the website using framer motion.
-
-👉 **Responsive Design**: Ensures optimal display and functionality across all devices.
-
-and many more, including code architecture and reusability 
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
- 
-**Installation**
-
-Install the project dependencies using npm:
+### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
-
-Create a new file named `.env` in the root of your project and add the following content:
-
- 
-
-Replace the placeholder values with your actual EmailJS credentials. You can obtain these credentials by signing up on the [EmailJS website](https://www.emailjs.com/).
-
-**Running the Project**
+### 2. Run the development server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
- 
+### 3. Build for production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🎨 Personalisation
+
+All content lives in **`lib/data.ts`** — edit this single file to update:
+
+- Your name, bio, email, social links
+- Stats (years experience, projects, etc.)
+- Services
+- Skills / tech stack
+- Work experience
+- Education
+- Projects (add live URLs and GitHub links)
+- Testimonials
+
+### Replacing the profile photo
+
+In `components/sections/About.tsx`, replace the placeholder `<div>` with:
+
+```tsx
+import Image from 'next/image';
+<Image src="/your-photo.jpg" alt="Your Name" fill className="object-cover rounded-3xl" />
+```
+
+Place your photo in the `public/` folder.
+
+### Adding your resume
+
+Drop your `resume.pdf` into the `public/` folder. The download button is already wired up.
+
+---
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── layout.tsx          # Root layout & metadata
+│   ├── page.tsx            # Main page (composes all sections)
+│   └── globals.css         # Global styles & utilities
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── sections/
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Services.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Education.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── Contact.tsx
+│   └── shared/
+│       ├── SectionWrapper.tsx
+│       ├── SectionHeading.tsx
+│       ├── GlowCard.tsx
+│       └── CursorGlow.tsx
+├── lib/
+│   ├── data.ts             # ← Edit this for your content
+│   └── utils.ts
+└── public/
+    └── resume.pdf          # ← Drop your CV here
+```
+
+---
+
+## 🔧 Tech Stack
+
+| Tool | Version |
+|------|---------|
+| Next.js | 15.1.0 |
+| React | 19 |
+| TypeScript | 5 |
+| Tailwind CSS | 3.4 |
+| Framer Motion | 11 |
+| Lucide React | 0.469 |
+
+---
+
+Built with ❤️ using Next.js & Framer Motion
