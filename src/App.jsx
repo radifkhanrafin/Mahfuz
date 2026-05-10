@@ -17,6 +17,7 @@ const App = () => {
         <Skills />
         <Works />
         <Experience />
+        <Experience />
         <Feedbacks />
         <Contact />
      <Chat/>

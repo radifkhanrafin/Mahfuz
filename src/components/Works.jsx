@@ -21,10 +21,10 @@ const ProjectCard = ({
 
   // Detect mobile once
   const isMobile = useMemo(() => window.innerWidth < 768, []);
-
+ 
   return (
-    <div className="w-full sm:max-w-md mx-auto mb-6">
-      <div className="relative w-full border-white border-2 p-5 rounded-2xl bg-gray-900 transition-transform hover:scale-[1.02] duration-300">
+    <div className="w-full sm:max-w-md mx-auto mb-6 ">
+      <div className="relative w-full border-white border-2 p-5 rounded-2xl lg:min-h-[530px] bg-gray-900 transition-transform hover:scale-[1.02] duration-300">
         {/* Project Image */}
         <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
           <a
