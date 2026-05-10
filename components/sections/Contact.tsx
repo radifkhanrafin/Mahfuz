@@ -189,7 +189,7 @@ export default function Contact() {
                     disabled={sending}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-1/2 flex items-center justify-center gap-2 py-4 rounded-xl bg-accent hover:bg-accent/90 text-white font-semibold shadow-glow-purple transition-all duration-200 btn-shine disabled:opacity-50 disabled:cursor-not-allowed text-xl"
+                    className="w-full  md:w-1/2 flex items-center justify-center gap-2 py-4 rounded-xl bg-accent hover:bg-accent/90 text-white font-semibold shadow-glow-purple transition-all duration-200 btn-shine disabled:opacity-50 disabled:cursor-not-allowed text-xl"
                   >
                     {sending ? (
                       <>
@@ -205,7 +205,7 @@ export default function Contact() {
                   </motion.button>
                   <button
                     onClick={handleWhatsApp}
-                    className='bg-green-600 hover:bg-green-700 py-3 px-8 rounded-xl w-fit text-white font-bold shadow-md shadow-primary'
+                    className='bg-green-400 hover:bg-green-700 py-3 px-8 rounded-xl w-fit text-white font-bold shadow-md shadow-primary'
                   >
                     {loading ? "Opening..." : "Contact via WhatsApp"}
                   </button>
