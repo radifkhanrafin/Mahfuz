@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X, Code2, Github, Linkedin, Facebook, Mail } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 const navLinks = [
@@ -12,7 +12,12 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
-
+const socials = [
+  { icon: Github, href: personalInfo.github, label: "", color: "hover:text-white hover:border-white/30" },
+  { icon: Linkedin, href: personalInfo.linkedin, label: "", color: "hover:text-[#0A66C2] hover:border-[#0A66C2]/30" },
+  { icon: Facebook, href: personalInfo.facebook, label: "", color: "hover:text-[#1877F2] hover:border-[#1877F2]/30" },
+  { icon: Mail, href: `mailto:${personalInfo.email}`, label: "", color: "hover:text-accent hover:border-accent/30" },
+];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,9 +59,32 @@ export default function Navbar() {
               <Code2 size={16} className="text-accent" />
             </div>
             <span className="font-bold text-lg">
-              {personalInfo.name.split(" ")[0]}
+              {/* {personalInfo.name.split(" ")[0]} */}
+              Mahfuz
             </span>
           </a>
+
+
+
+          {/* Social Links */}
+          <div className="hidden md:flex gap-3 ">
+            {socials.map(({ icon: Icon, href, label, color }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className={`flex items-center gap-2.5 px-4 py-3 rounded-xl glass border border-white/10 text-white/40 text-sm font-medium transition-all duration-200 ${color}`}
+              >
+                <Icon size={16} />
+                {label}
+              </motion.a>
+            ))}
+          </div>
+
+
 
           {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-8">
@@ -74,7 +102,7 @@ export default function Navbar() {
 
           {/* Resume */}
           <a
-            href="https://drive.google.com/file/d/1riKm2nwsXUGMs3r68Ya6ZXMIFnwjVr07/view?usp=sharing"
+            href="/resume/Mahfuz_Hossain_Resume.pdf"
             target="_blank"
             className="hidden md:block px-4 py-2 rounded-full bg-accent/10 border border-accent/30 text-sm"
           >
@@ -128,6 +156,8 @@ export default function Navbar() {
                   </button>
                 ))}
               </div>
+
+
 
               <a
                 href="https://drive.google.com/file/d/1riKm2nwsXUGMs3r68Ya6ZXMIFnwjVr07/view?usp=sharing"
