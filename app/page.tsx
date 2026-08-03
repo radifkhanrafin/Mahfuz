@@ -17,15 +17,15 @@ export default function Home() {
     <>
       <CursorGlow />
       <Navbar />
-      <main >
+      <main>
         <Hero />
         <About />
-        <Services />
         <Skills />
-        <Experience />
-        <Education />
-        <Achievement/>
         <Projects />
+        <Experience />
+        <Achievement />
+        <Services />
+        <Education />
         <Testimonials />
         <Contact />
       </main>

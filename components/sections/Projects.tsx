@@ -79,6 +79,7 @@ export default function Projects() {
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => {
+              if (!project) return null;
               const colors = getColor(project.color);
               return (
                 <motion.div
@@ -164,7 +165,7 @@ export default function Projects() {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5 mb-4">
-                      {project.tags.slice(0, 3).map((tag) => (
+                      {project.tags.map((tag) => (
                         <span
                           key={tag}
                           className={`text-xs font-mono px-2 py-0.5 rounded-md border ${colors.tag}`}

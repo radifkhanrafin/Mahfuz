@@ -299,7 +299,7 @@ export const projects = [
   {
     title: "Vijilan",
     image: vijilan,
-    category: "Full Stack",
+    category: "Front-End",
     description:
       "Security monitoring dashboard with real-time threat detection, log analysis, and incident management workflows.",
     tags: ["React", "Node.js", "Socket.IO", "MongoDB", "Chart.js"],
@@ -389,7 +389,7 @@ export const projects = [
   {
     title: "Legal Lawyer",
     image: lawyer,
-    category: "Frontend",
+    category: "Full Stack",
     description:
       "Professional law firm website with case consultation booking, attorney profiles, and legal resource library.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS"],
@@ -417,7 +417,7 @@ export const projects = [
       "News/blog",
       "Project gallery",
     ],
-    liveUrl: "https://fascinating-panda-892615.netlify.app/",
+    liveUrl: "https://wubcs.vercel.app/",
     githubUrl: "#",
     badge: "Solo",
     color: "accent-2",
