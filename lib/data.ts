@@ -277,7 +277,6 @@ export const projects = [
     badge: "Featured",
     color: "primary",
   },
-  ,
   {
     title: "Hire Wave",
     image: hirewave,

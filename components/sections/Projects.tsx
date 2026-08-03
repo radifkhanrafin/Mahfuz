@@ -42,7 +42,7 @@ export default function Projects() {
   const filtered =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p?.category === activeCategory);
 
   return (
     <SectionWrapper id="projects">
