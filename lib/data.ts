@@ -1,23 +1,21 @@
 // lib/data.ts — All portfolio content in one place. Edit this to personalise.
 
- 
-// Projects  
+// Projects
 import wubcs from "../public/Project/wubcs.png";
 import hirewave from "../public/Project/hirewave.png";
 import lawyer from "../public/Project/lawyer.png";
-import vessel from "../public/Project/vessel.png";  
+import vessel from "../public/Project/vessel.png";
 import resturent from "../public/Project/resturent.png";
 import vijilan from "../public/Project/vijilan.png";
+import nhims from "../public/Project/nhims.png";
 import nearby_blood from "../public/Project/nearby_blood.png";
 
 // Skills & Tech
- 
-
 
 export const skills = [
   {
     name: "HTML 5",
-    icon:  "/tech/html.png",
+    icon: "/tech/html.png",
     category: "Frontend",
   },
   {
@@ -126,7 +124,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/mahfuz-web-dev",
   facebook: "https://www.facebook.com/mahfuz.web.dev",
   upwork: "https://www.upwork.com/freelancers/~011dbc167e1a463e39",
-  resumeUrl:  '#',
+  resumeUrl: "#",
   avatarUrl: "",
   stats: [
     { label: "Years Experience", value: "3+" },
@@ -157,7 +155,7 @@ export const services = [
       "Designing scalable REST APIs and server architecture with Node.js, Express, and MongoDB.",
     icon: "Server",
     color: "accent-3",
-  }
+  },
 ];
 
 // export const skills = [
@@ -187,22 +185,25 @@ export const achievements = [
     title: "ICPC Regional Contest",
     organization: "ACM ICPC",
     year: "2024",
-    description: "Participated in ACM ICPC Regional Contest and solved algorithmic problems under time pressure.",
+    description:
+      "Participated in ACM ICPC Regional Contest and solved algorithmic problems under time pressure.",
     icon: "Trophy",
   },
   {
     title: "beecrowd & hackerrank 500+ Problems",
     organization: "LeetCode",
     year: "2023 - Present",
-    description: "Solved 500+ DSA problems focusing on dynamic programming, graphs, and system design basics.",
+    description:
+      "Solved 500+ DSA problems focusing on dynamic programming, graphs, and system design basics.",
     icon: "Code",
   },
- 
+
   {
     title: "Open Source Contributor",
     organization: "GitHub Community",
     year: "2022 - Present",
-    description: "Contributed to multiple open-source React and Node.js projects.",
+    description:
+      "Contributed to multiple open-source React and Node.js projects.",
     icon: "GitBranch",
   },
 ];
@@ -214,7 +215,7 @@ export const experiences = [
     period: "2023 – Present",
     description:
       "Leading full-stack development of e-commerce and marketplace platforms. Architected scalable MongoDB schemas, built RESTful APIs, and delivered responsive React frontends.",
-    tags: ["Next.js","React", "Node.js", "MongoDB", "Express", "Redux"],
+    tags: ["Next.js", "React", "Node.js", "MongoDB", "Express", "Redux"],
     type: "Full-time",
   },
   {
@@ -225,7 +226,7 @@ export const experiences = [
       "Developed client-facing web applications and mentored junior developers. Introduced component-driven development with React and streamlined the team's workflow with Git.",
     tags: ["React", "Next.js", "Tailwind CSS", "Figma"],
     type: "Full-time",
-  } 
+  },
 ];
 
 export const education = [
@@ -249,13 +250,47 @@ export const education = [
 
 export const projects = [
   {
+    title: "National Health Information Management System (NHIMS)",
+    image: nhims,
+    category: "Full Stack",
+    description:
+      "A scalable healthcare management platform that digitizes hospital operations with role-based access, patient management, appointment booking, electronic medical records, laboratory services, pharmacy management, and secure JWT-based authentication.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+      "React Query",
+      "Zustand",
+    ],
+    features: [
+      "Multi-role dashboards",
+      "Hospital & patient management",
+      "Appointment booking",
+      "Lab & pharmacy workflow",
+    ],
+    liveUrl: "https://nhims-bd.vercel.app/",
+    githubUrl: "https://github.com/radifkhanrafin/NHIMS",
+    badge: "Featured",
+    color: "primary",
+  },
+  ,
+  {
     title: "Hire Wave",
-    image:hirewave,
+    image: hirewave,
     category: "Full Stack",
     description:
       "A modern job board platform connecting employers and job seekers. Features real-time notifications, advanced filtering, and a dashboard for managing applications.",
     tags: ["React.js", "MongoDB", "Node.js", "Tailwind CSS", "JWT"],
-    features: ["Real-time job alerts", "Company profiles", "Resume upload", "Application tracking"],
+    features: [
+      "Real-time job alerts",
+      "Company profiles",
+      "Resume upload",
+      "Application tracking",
+    ],
     liveUrl: "https://hire-wave.web.app/",
     githubUrl: "https://github.com/ProgrammerShipon/HireWave-Client",
     badge: "Team",
@@ -263,12 +298,17 @@ export const projects = [
   },
   {
     title: "Vijilan",
-    image:vijilan,
+    image: vijilan,
     category: "Full Stack",
     description:
       "Security monitoring dashboard with real-time threat detection, log analysis, and incident management workflows.",
     tags: ["React", "Node.js", "Socket.IO", "MongoDB", "Chart.js"],
-    features: ["Live threat monitoring", "Log analytics", "Incident reports", "Role-based access"],
+    features: [
+      "Live threat monitoring",
+      "Log analytics",
+      "Incident reports",
+      "Role-based access",
+    ],
     liveUrl: "https://vijilin.vercel.app/",
     githubUrl: "#",
     badge: "Team",
@@ -276,12 +316,17 @@ export const projects = [
   },
   {
     title: "Nearby Blood",
-    image:nearby_blood,
+    image: nearby_blood,
     category: "Full Stack",
     description:
       "Emergency blood donor finder app connecting donors and recipients by location with real-time availability updates.",
     tags: ["React Native", "Firebase", "Google Maps API", "Node.js"],
-    features: ["Geolocation search", "Push notifications", "Donor profiles", "Emergency alerts"],
+    features: [
+      "Geolocation search",
+      "Push notifications",
+      "Donor profiles",
+      "Emergency alerts",
+    ],
     liveUrl: "https://nearby-blood.vercel.app/",
     githubUrl: "https://github.com/yourusername/nearby-blood-client",
     badge: "Solo",
@@ -289,12 +334,17 @@ export const projects = [
   },
   {
     title: "WhatsApp Automation Workflow",
-    image:"",
+    image: "",
     category: "Automation",
     description:
       "Automated WhatsApp messaging workflow system for businesses — schedule messages, manage contacts, and track delivery.",
     tags: ["Node.js", "Baileys", "MongoDB", "Express", "React"],
-    features: ["Bulk messaging", "Scheduled sends", "Contact groups", "Delivery reports"],
+    features: [
+      "Bulk messaging",
+      "Scheduled sends",
+      "Contact groups",
+      "Delivery reports",
+    ],
     liveUrl: "#",
     githubUrl: "#",
     badge: "Solo",
@@ -302,12 +352,17 @@ export const projects = [
   },
   {
     title: "Restaurant Management",
-    image:resturent,
+    image: resturent,
     category: "Full Stack",
     description:
       "Complete restaurant management system with POS, table management, menu builder, and real-time order tracking.",
     tags: ["React", "Node.js", "MongoDB", "Socket.IO", "Stripe"],
-    features: ["POS system", "Order tracking", "Menu management", "Payment integration"],
+    features: [
+      "POS system",
+      "Order tracking",
+      "Menu management",
+      "Payment integration",
+    ],
     liveUrl: "https://hungry-me.vercel.app/",
     githubUrl: "#",
     badge: "Solo",
@@ -315,12 +370,17 @@ export const projects = [
   },
   {
     title: "Any Vessel",
-    image:vessel,
+    image: vessel,
     category: "Full Stack",
     description:
       "Maritime vessel tracking and management platform with live AIS data integration and fleet analytics.",
     tags: ["Next.js", "Node.js", "MongoDB", "Leaflet.js", "REST API"],
-    features: ["Live tracking", "Fleet dashboard", "Route history", "Port management"],
+    features: [
+      "Live tracking",
+      "Fleet dashboard",
+      "Route history",
+      "Port management",
+    ],
     liveUrl: "https://cheerful-cucurucho-60f8c8.netlify.app/",
     githubUrl: "https://github.com/foridislam332/anyvessel-client/tree/Mahfuz",
     badge: "Team",
@@ -328,12 +388,17 @@ export const projects = [
   },
   {
     title: "Legal Lawyer",
-    image:lawyer,
+    image: lawyer,
     category: "Frontend",
     description:
       "Professional law firm website with case consultation booking, attorney profiles, and legal resource library.",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS"],
-    features: ["Appointment booking", "Attorney profiles", "Blog/articles", "Live chat"],
+    features: [
+      "Appointment booking",
+      "Attorney profiles",
+      "Blog/articles",
+      "Live chat",
+    ],
     liveUrl: "https://grand-centaur-e1b3c6.netlify.app/",
     githubUrl: "https://github.com/radifkhanrafin/Legal_lawyer",
     badge: "Solo",
@@ -341,12 +406,17 @@ export const projects = [
   },
   {
     title: "WUB Computer Society",
-    image:wubcs,
+    image: wubcs,
     category: "Frontend",
     description:
       "Official website for the WUB Computer Society club — events, member portal, blog, and project showcase.",
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Framer Motion"],
-    features: ["Event management", "Member portal", "News/blog", "Project gallery"],
+    features: [
+      "Event management",
+      "Member portal",
+      "News/blog",
+      "Project gallery",
+    ],
     liveUrl: "https://fascinating-panda-892615.netlify.app/",
     githubUrl: "#",
     badge: "Solo",
@@ -385,9 +455,29 @@ export const testimonials = [
   },
 ];
 export const orbitItems = [
-  { name: "React", color: "text-blue-400 border-blue-500/20 bg-blue-500/10", angle: 0 },
-  { name: "Next.js", color: "text-white border-white/20 bg-white/5", angle: 72 },
-  { name: "Node.js", color: "text-teal-300 border-teal-400/20 bg-teal-400/10", angle: 144 },
-  { name: "TypeScript", color: "text-purple-300 border-purple-500/20 bg-purple-500/10", angle: 216 },
-  { name: "MongoDB", color: "text-green-300 border-green-500/20 bg-green-500/10", angle: 288 },
+  {
+    name: "React",
+    color: "text-blue-400 border-blue-500/20 bg-blue-500/10",
+    angle: 0,
+  },
+  {
+    name: "Next.js",
+    color: "text-white border-white/20 bg-white/5",
+    angle: 72,
+  },
+  {
+    name: "Node.js",
+    color: "text-teal-300 border-teal-400/20 bg-teal-400/10",
+    angle: 144,
+  },
+  {
+    name: "TypeScript",
+    color: "text-purple-300 border-purple-500/20 bg-purple-500/10",
+    angle: 216,
+  },
+  {
+    name: "MongoDB",
+    color: "text-green-300 border-green-500/20 bg-green-500/10",
+    angle: 288,
+  },
 ];
