@@ -120,7 +120,7 @@ export const personalInfo = {
   bio: "A passionate full-stack developer from Bangladesh crafting pixel-perfect, performant web experiences. I specialise in React, Next.js, and the full MERN stack — turning complex problems into elegant digital solutions.",
   email: "mdmahfuzhossain278@gmail.com",
   location: "Dhaka, Bangladesh",
-  github: "https://github.com/radifkhanrafin",
+  github: "https://github.com/mahfuz-web-dev",
   linkedin: "https://www.linkedin.com/in/mahfuz-web-dev",
   facebook: "https://www.facebook.com/mahfuz.web.dev",
   upwork: "https://www.upwork.com/freelancers/~011dbc167e1a463e39",
